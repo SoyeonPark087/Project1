@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>집반찬연구소</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+    <header class="header">
+        <div class="header__inner">
+
+            <!-- 검색 -->
+            <div class="header__search">
+                <form class="search-form" id="searchForm">
+                    <label for="headerSearch" class="blind">
+                        검색어 입력
+                    </label>
+
+                    <input
+                        type="text"
+                        id="headerSearch"
+                        class="search-form__input"
+                        placeholder="반찬을 검색해주세요"
+                    >
+
+                    <button
+                        type="submit"
+                        class="search-form__button"
+                        aria-label="검색"
+                    >
+                        <img
+                            src="./images/icons/imgi_25_icon-search-f5f5f5-18.svg"
+                            alt="검색 아이콘"
+                        >
+                    </button>
+                </form>
+            </div>
+
+
+<!-- 중앙 로고 -->
+<h1 class="header__logo">
+    <a href="./index.html">
+        <img
+            src="./images/icons/imgi_11_logo_pc.svg"
+            alt="집반찬연구소"
+        >
+    </a>
+</h1>
+
+
+            <!-- 오른쪽 메뉴 영역 -->
+            <div class="header__right">
+
+                <!-- 상단 작은 메뉴 -->
+                <nav
+                    class="utility-menu"
+                    aria-label="회원 메뉴"
+                >
+                    <ul>
+                        <li>
+                            <a href="#">로그인</a>
+                        </li>
+
+                        <li>
+                            <a href="#">회원가입</a>
+                        </li>
+
+                        <li>
+                            <a href="#">내정보</a>
+                        </li>
+                    </ul>
+                </nav>
+
+
+                <!-- 하단 메인 메뉴 -->
+<nav class="main-menu" aria-label="주요 메뉴">
+    <ul>
+        <li>
+            <a href="#">
+                <img
+                    src="./images/icons/imgi_26_icon-tel2.svg"
+                    alt="전화 아이콘"
+                    class="main-menu__icon"
+                >
+                <span>전화주문</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <img
+                    src="./images/icons/imgi_27_icon-document-d4d4d4-28.svg"
+                    alt="브랜드 아이콘"
+                    class="main-menu__icon"
+                >
+                <span>브랜드</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <img
+                    src="./images/icons/imgi_28_icon-list-d4d4d4-28.svg"
+                    alt="반찬 아이콘"
+                    class="main-menu__icon"
+                >
+                <span>반찬보기</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <img
+                    src="./images/icons/imgi_29_icon-cart-d4d4d4-28.svg"
+                    alt="장바구니 아이콘"
+                    class="main-menu__icon"
+                >
+                <span>장바구니</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+            </div>
+
+        </div>
+    </header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero__inner">
+        <img
+            src="./images/imgi_31_banner_6c144415eb989c40b109a3f1fdfc276e.jfif"
+            alt="쭈꾸미 파스타 배너"
+            class="hero__image"
+        >
+    </div>
+</section>
+
+<!-- ========================================
+     부담없는 알뜰 반찬
+========================================= -->
+<section class="product-section product-section--first">
+    <div class="product-section__inner">
+
+        <!-- 섹션 타이틀 -->
+        <div class="product-section__header">
+            <h2 class="product-section__title">
+                부담없는 알뜰 반찬
+            </h2>
+
+            <p class="product-section__description">
+                이번 주 가장 추천하는 제품만 골라드려요.
+            </p>
+        </div>
+
+
+        <!-- 상품 목록 -->
+        <div class="product-grid">
+
+            <!-- 상품 01 -->
+            <article class="product-card">
+                <a href="#" class="product-card__link">
+
+                    <div class="product-card__image-wrap">
+                        <img
+                            src="./images/01_banchan/imgi_60_1358_ZIP_P_0100_T.jpg"
+                            alt="소불고기 볶음"
+                            class="product-card__image"
+                        >
+                    </div>
+
+                    <div class="product-card__content">
+                        <span class="product-card__tag product-card__tag--red">
+                            신제품
+                        </span>
+
+                        <h3 class="product-card__title">
+                            소불고기 볶음
+                        </h3>
+
+                        <p class="product-card__description">
+                            담백한 소고기와 감칠맛 나는 양념의 만남
+                        </p>
+
+                        <div class="product-card__price">
+                            <span class="product-card__discount">
+                                7%
+                            </span>
+
+                            <strong>
+                                12,800원
+                            </strong>
+                        </div>
+
+                        <del class="product-card__original-price">
+                            13,800원
+                        </del>
+                    </div>
+
+                </a>
+            </article>
+
+
+            <!-- 상품 02 -->
+            <article class="product-card">
+                <a href="#" class="product-card__link">
+
+                    <div class="product-card__image-wrap">
+                        <img
+                            src="./images/03_new_banchan/imgi_260_ZIP_P_0213_T.jpg"
+                            alt="쭈꾸미 미나리 파스타"
+                            class="product-card__image"
+                        >
+                    </div>
+
+                    <div class="product-card__content">
+                        <span class="product-card__tag product-card__tag--red">
+                            신제품
+                        </span>
+
+                        <h3 class="product-card__title">
+                            쭈꾸미 미나리 파스타
+                        </h3>
+
+                        <p class="product-card__description">
+                            향긋한 미나리와 쭈꾸미를 함께 즐겨보세요
+                        </p>
+
+                        <div class="product-card__price">
+                            <span class="product-card__discount">
+                                7%
+                            </span>
+
+                            <strong>
+                                12,800원
+                            </strong>
+                        </div>
+
+                        <del class="product-card__original-price">
+                            13,800원
+                        </del>
+                    </div>
+
+                </a>
+            </article>
+
+
+            <!-- 상품 03 -->
+            <article class="product-card">
+                <a href="#" class="product-card__link">
+
+                    <div class="product-card__image-wrap">
+                        <img
+                            src="./images/01_banchan/imgi_67_1189_ZIP_P_6207_T.jpg"
+                            alt="가지나물"
+                            class="product-card__image"
+                        >
+                    </div>
+
+                    <div class="product-card__content">
+                        <span class="product-card__tag product-card__tag--green">
+                            인기
+                        </span>
+
+                        <h3 class="product-card__title">
+                            가지나물
+                        </h3>
+
+                        <p class="product-card__description">
+                            한 끼를 든든하게 채워주는 고소한 나물
+                        </p>
+
+                        <div class="product-card__price">
+                            <strong>
+                                12,800원
+                            </strong>
+                        </div>
+                    </div>
+
+                </a>
+            </article>
+
+
+            <!-- 상품 04 -->
+            <article class="product-card">
+                <a href="#" class="product-card__link">
+
+                    <div class="product-card__image-wrap">
+                        <img
+                            src="./images/01_banchan/imgi_81_1505_ZIP_P_3112_T.jpg"
+                            alt="한끼 두부전"
+                            class="product-card__image"
+                        >
+                    </div>
+
+                    <div class="product-card__content">
+                        <h3 class="product-card__title">
+                            한끼 두부전
+                        </h3>
+
+                        <p class="product-card__description">
+                            담백하고 고소하게 즐기는 한 끼 반찬
+                        </p>
+
+                        <div class="product-card__price">
+                            <strong>
+                                6,800원
+                            </strong>
+                        </div>
+                    </div>
+
+                </a>
+            </article>
+
+
+            <!-- 상품 05 -->
+            <article class="product-card">
+                <a href="#" class="product-card__link">
+
+                    <div class="product-card__image-wrap">
+                        <img
+                            src="./images/01_banchan/imgi_83_2467_ZIP_P_5209_T.png"
+                            alt="버섯 모둠볶음"
+                            class="product-card__image"
+                        >
+                    </div>
+
+                    <div class="product-card__content">
+                        <span class="product-card__tag product-card__tag--red">
+                            신제품
+                        </span>
+
+                        <h3 class="product-card__title">
+                            버섯 모둠볶음
+                        </h3>
+
+                        <p class="product-card__description">
+                            다양한 버섯을 담백하게 볶아낸 건강 반찬
+                        </p>
+
+                        <div class="product-card__price">
+                            <span class="product-card__discount">
+                                7%
+                            </span>
+
+                            <strong>
+                                12,800원
+                            </strong>
+                        </div>
+
+                        <del class="product-card__original-price">
+                            13,800원
+                        </del>
+                    </div>
+
+                </a>
+            </article>
+
+
+            <!-- 상품 06 -->
+            <article class="product-card">
+                <a href="#" class="product-card__link">
+
+                    <div class="product-card__image-wrap">
+                        <img
+                            src="./images/01_banchan/imgi_92_659_ZIP_P_1029_T.jpg"
+                            alt="된장 짜글이"
+                            class="product-card__image"
+                        >
+                    </div>
+
+                    <div class="product-card__content">
+                        <span class="product-card__tag product-card__tag--red">
+                            신제품
+                        </span>
+
+                        <h3 class="product-card__title">
+                            된장 짜글이
+                        </h3>
+
+                        <p class="product-card__description">
+                            구수한 국물과 신선한 야채들의 조화
+                        </p>
+
+                        <div class="product-card__price">
+                            <span class="product-card__discount">
+                                7%
+                            </span>
+
+                            <strong>
+                                12,800원
+                            </strong>
+                        </div>
+
+                        <del class="product-card__original-price">
+                            13,800원
+                        </del>
+                    </div>
+
+                </a>
+            </article>
+
+
+            <!-- 상품 07 -->
+            <article class="product-card">
+                <a href="#" class="product-card__link">
+
+                    <div class="product-card__image-wrap">
+                        <img
+                            src="./images/01_banchan/imgi_64_1448_ZIP_P_5153_T.jpg"
+                            alt="해산물 냉채"
+                            class="product-card__image"
+                        >
+                    </div>
+
+                    <div class="product-card__content">
+                        <h3 class="product-card__title">
+                            해산물 냉채
+                        </h3>
+
+                        <p class="product-card__description">
+                            상큼한 소스와 신선한 해산물을 함께
+                        </p>
+
+                        <div class="product-card__price">
+                            <strong>
+                                12,800원
+                            </strong>
+                        </div>
+                    </div>
+
+                </a>
+            </article>
+
+
+            <!-- 상품 08 -->
+            <article class="product-card">
+                <a href="#" class="product-card__link">
+
+                    <div class="product-card__image-wrap">
+                        <img
+                            src="./images/01_banchan/imgi_61_86_ZIP_P_6008_T.jpg"
+                            alt="미역줄기 볶음"
+                            class="product-card__image"
+                        >
+                    </div>
+
+                    <div class="product-card__content">
+                        <h3 class="product-card__title">
+                            미역줄기 볶음
+                        </h3>
+
+                        <p class="product-card__description">
+                            꼬들꼬들한 식감이 살아있는 밑반찬
+                        </p>
+
+                        <div class="product-card__price">
+                            <strong>
+                                6,800원
+                            </strong>
+                        </div>
+                    </div>
+
+                </a>
+            </article>
+        </div>
+        <button
+            type="button"
+            class="mobile-more-btn"
+            data-target=".product-grid"
+            aria-expanded="false"
+        >
+            더보기
+        </button>
+    </div>
+    
+</section>
+
+<section class="meal-section">
+    <div class="meal-section__inner">
+        <div class="meal-section__header">
+            <h2 class="meal-section__title">집밥 한 끼</h2>
+            <p class="meal-section__desc">치솟는 물가에 한입만 소식</p>
+        </div>
+
+        <div class="meal-grid">
+            <!-- 1 -->
+            <article class="meal-card">
+                <a href="#" class="meal-card__link">
+                    <div class="meal-card__thumb">
+                        <span class="meal-card__badge">11%</span>
+                        <img src="./images/01_banchan/imgi_65_ZIP_P_6446_T.jpg"
+                        alt="매콤스팸 김치덮밥" class="meal-card__image">
+                        <button type="button" class="meal-card__icon-btn">
+                            <img src="./images/icons/imgi_54_icon-cart-fafafa-28.svg" alt="상품 잠금 아이콘">
+                        </button>
+                    </div>
+
+                    <div class="meal-card__content">
+                        <div class="meal-card__tag-area"></div>
+
+                        <h3 class="meal-card__title">매콤스팸 김치덮밥</h3>
+                        <p class="meal-card__text">입맛 돋우는 매콤한 스팸</p>
+
+                        <div class="meal-card__price">
+                            <span class="meal-card__discount">11%</span>
+                            <strong>3400원</strong>
+                        </div>
+
+                        <del class="meal-card__origin">3,900원</del>
+                    </div>
+                </a>
+            </article>
+
+            <!-- 2 -->
+            <article class="meal-card">
+                <a href="#" class="meal-card__link">
+                    <div class="meal-card__thumb">
+                        <span class="meal-card__badge">11%</span>
+                        <img src="./images/01_banchan/imgi_74_2001_ZIP_P_6397_T.jpg
+                        " alt="새우볶음밥" class="meal-card__image">
+                        <button type="button" class="meal-card__icon-btn">
+                            <img src="./images/icons/imgi_54_icon-cart-fafafa-28.svg" alt="상품 잠금 아이콘">
+                        </button>
+                    </div>
+
+                    <div class="meal-card__content">
+                        <div class="meal-card__tag-area">
+                            <span class="meal-card__tag meal-card__tag--red">신제품</span>
+                        </div>
+
+                        <h3 class="meal-card__title">새우볶음밥</h3>
+                        <p class="meal-card__text">고소하고 담백한 맛을 즐겨봐요</p>
+
+                        <div class="meal-card__price">
+                            <span class="meal-card__discount">12%</span>
+                            <strong>3800원</strong>
+                        </div>
+
+                        <del class="meal-card__origin">4,300원</del>
+                    </div>
+                </a>
+            </article>
+
+            <!-- 3 -->
+            <article class="meal-card">
+                <a href="#" class="meal-card__link">
+                    <div class="meal-card__thumb">
+                        <span class="meal-card__badge">11%</span>
+                        <img src="./images/01_banchan/imgi_90_ZIP_P_0212_T.jpg"
+                        alt="한입 새우 오일 파스타" class="meal-card__image">
+                        <button type="button" class="meal-card__icon-btn">
+                            <img src="./images/icons/imgi_54_icon-cart-fafafa-28.svg" alt="상품 잠금 아이콘">
+                        </button>
+                    </div>
+
+                    <div class="meal-card__content">
+                        <div class="meal-card__tag-area">
+                            <span class="meal-card__tag meal-card__tag--red">BEST</span>
+                        </div>
+
+                        <h3 class="meal-card__title">한입 새우 오일 파스타</h3>
+                        <p class="meal-card__text">통통한 새우와 오일 소스가 매력적</p>
+
+                        <div class="meal-card__price">
+                            <span class="meal-card__discount">11%</span>
+                            <strong>4700원</strong>
+                        </div>
+
+                        <del class="meal-card__origin">5,300원</del>
+                    </div>
+                </a>
+            </article>
+
+            <!-- 4 -->
+            <article class="meal-card">
+                <a href="#" class="meal-card__link">
+                    <div class="meal-card__thumb">
+                        <span class="meal-card__badge">11%</span>
+                        <img src="./images/01_banchan/imgi_93_1523_ZIP_P_6244_T.jpg"
+                        alt="강된장 주먹밥" class="meal-card__image">
+                        <button type="button" class="meal-card__icon-btn">
+                            <img src="./images/icons/imgi_54_icon-cart-fafafa-28.svg" alt="상품 잠금 아이콘">
+                        </button>
+                    </div>
+
+                    <div class="meal-card__content">
+                        <div class="meal-card__tag-area"></div>
+
+                        <h3 class="meal-card__title">강된장 주먹밥</h3>
+                        <p class="meal-card__text">구수한 강된장과 든든한 한 끼</p>
+
+                        <div class="meal-card__price">
+                            <span class="meal-card__discount">12%</span>
+                            <strong>6400원</strong>
+                        </div>
+
+                        <del class="meal-card__origin">7,300원</del>
+                    </div>
+                </a>
+            </article>
+        </div>
+    </div>
+</section>
+
+
+<!-- 고객추천반찬 -->
+<section class="customer-section">
+    <div class="customer-section__inner">
+
+        <h2 class="customer-section__title">
+            고객이 추천하는 찐 추천 반찬
+        </h2>
+
+        <!-- 추천 탭 -->
+        <div class="customer-tabs">
+            <button type="button" class="customer-tabs__btn active">고수님의 추천</button>
+            <button type="button" class="customer-tabs__btn">김*혜님 추천</button>
+            <button type="button" class="customer-tabs__btn">장*영님 추천</button>
+            <button type="button" class="customer-tabs__btn">원*미님 추천</button>
+        </div>
+
+        <div class="customer-content">
+
+            <!-- 왼쪽 대표 이미지 -->
+            <div class="customer-content__visual">
+                <img
+                    src="./images/02_day_banchan/imgi_268_1631_ZIP_P_9346_T.jpg"
+                    alt="고객 추천 반찬 상차림"
+                >
+            </div>
+
+            <!-- 오른쪽 -->
+            <div class="customer-content__right">
+
+                <!-- 고객 설명 -->
+                <div class="customer-info">
+                    <div class="customer-info__text">
+                        <h3>고수님의 장바구니</h3>
+
+                        <p>
+                            매일 아침 차리는게 정말 일이었는데<br>
+                            집밥 연구소하면서<br>
+                            건강하게 먹을 수 있었어요!
+                        </p>
+                    </div>
+
+                    <img
+                        src="./images/imgi_58_cate_3 1.png"
+                        alt="고객 추천 캐릭터"
+                        class="customer-info__character"
+                    >
+                </div>
+
+
+                <!-- 추천 상품 -->
+                <div class="customer-products">
+
+                    <!-- 상품 1 -->
+                    <article class="customer-product">
+                        <div class="customer-product__image">
+                            <img
+                                src="./images/01_banchan/imgi_101_2361_ZIP_P_6233_T_2.jpg"
+                                alt="소세지 야채볶음"
+                            >
+
+                            <button type="button" class="customer-product__cart">
+                                <img
+                                    src="./images/icons/imgi_54_icon-cart-fafafa-28.svg"
+                                    alt="장바구니 담기"
+                                >
+                            </button>
+                        </div>
+
+                        <span class="customer-product__tag">먼저상품</span>
+
+                        <h4>소세지 야채볶음</h4>
+
+                        <p class="customer-product__desc">
+                            먹고 먹을 수 있는 맛...
+                        </p>
+
+                        <strong>4,700원</strong>
+                    </article>
+
+
+                    <!-- 상품 2 -->
+                    <article class="customer-product">
+                        <div class="customer-product__image">
+                            <img
+                                src="./images/01_banchan/imgi_91_528_ZIP_P_6074_T.jpg"
+                                alt="고소 새우마늘쫑볶음"
+                            >
+
+                            <button type="button" class="customer-product__cart">
+                                <img
+                                    src="./images/icons/imgi_54_icon-cart-fafafa-28.svg"
+                                    alt="장바구니 담기"
+                                >
+                            </button>
+                        </div>
+
+                        <span class="customer-product__tag">먼저상품</span>
+
+                        <h4>고소 새우마늘쫑볶음</h4>
+
+                        <p class="customer-product__desc">
+                            아이들이 먹기 좋은 새...
+                        </p>
+
+                        <strong>4,700원</strong>
+                    </article>
+
+
+                    <!-- 상품 3 -->
+                    <article class="customer-product">
+                        <div class="customer-product__image">
+                            <img
+                                src="./images/03_new_banchan/imgi_264_36_ZIP_P_5003_T.jpg"
+                                alt="숙주나물무침"
+                            >
+
+                            <button type="button" class="customer-product__cart">
+                                <img
+                                    src="./images/icons/imgi_54_icon-cart-fafafa-28.svg"
+                                    alt="장바구니 담기"
+                                >
+                            </button>
+                        </div>
+
+                        <span class="customer-product__tag">먼저상품</span>
+
+                        <h4>숙주나물무침</h4>
+
+                        <p class="customer-product__desc">
+                            깔끔하고 담백하게...
+                        </p>
+
+                        <strong>4,700원</strong>
+                    </article>
+
+
+                    <!-- 상품 4 -->
+                    <article class="customer-product">
+                        <div class="customer-product__image">
+                            <img
+                                src="./images/03_new_banchan/imgi_265_31_ZIP_P_5001_T.jpg"
+                                alt="시금치나물"
+                            >
+
+                            <button type="button" class="customer-product__cart">
+                                <img
+                                    src="./images/icons/imgi_54_icon-cart-fafafa-28.svg"
+                                    alt="장바구니 담기"
+                                >
+                            </button>
+                        </div>
+
+                        <span class="customer-product__tag">먼저상품</span>
+
+                        <h4>시금치나물</h4>
+
+                        <p class="customer-product__desc">
+                            향긋하게 무친 집밥...
+                        </p>
+
+                        <strong>4,700원</strong>
+                    </article>
+
+
+                    <!-- 상품 5 -->
+                    <article class="customer-product">
+                        <div class="customer-product__image">
+                            <img
+                                src="./images/01_banchan/imgi_70_ZIP_P_6124_t.jpg"
+                                alt="감자채볶음"
+                            >
+
+                            <button type="button" class="customer-product__cart">
+                                <img
+                                    src="./images/icons/imgi_54_icon-cart-fafafa-28.svg"
+                                    alt="장바구니 담기"
+                                >
+                            </button>
+                        </div>
+
+                        <span class="customer-product__tag">먼저상품</span>
+
+                        <h4>감자채볶음</h4>
+
+                        <p class="customer-product__desc">
+                            고소하면서 담백한...
+                        </p>
+
+                        <strong>4,700원</strong>
+                    </article>
+
+                </div>
+
+                <!-- 전체 담기 -->
+                <button type="button" class="customer-all-cart">
+                    장바구니에 한번에 담기
+                </button>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- 배너 섹션 -->
+<section class="banner-section">
+    <div class="banner-section__inner">
+
+        <a href="#" class="banner-section__item">
+            <img
+                src="./images/imgi_14_pc_15.png"
+                alt="원더스토어 바로가기 배너"
+            >
+        </a>
+
+        <a href="#" class="banner-section__item">
+            <img
+                src="./images/imgi_15_pc_wonder.png"
+                alt="집반찬연구소 이야기 배너"
+            >
+        </a>
+
+        <a href="#" class="banner-section__item">
+            <img
+                src="./images/imgi_16_pc_brand.jpg"
+                alt="정기배송 할인 배너"
+            >
+        </a>
+
+    </div>
+</section>
+
+
+
+<!-- MD추천반찬 -->
+<section class="md-section">
+    <div class="md-section__inner">
+
+        <div class="md-section__header">
+            <h2 class="md-section__title">MD추천반찬</h2>
+            <p class="md-section__subtitle">이번 주 가장 추천하는 제품만 골라드려요.</p>
+        </div>
+
+        <!-- 카테고리 -->
+        <div class="md-category">
+            <button type="button" class="md-category__btn active">비빔밥</button>
+            <button type="button" class="md-category__btn">국 / 찌개 / 탕</button>
+            <button type="button" class="md-category__btn">아이 반찬</button>
+            <button type="button" class="md-category__btn">볶음</button>
+            <button type="button" class="md-category__btn">무침</button>
+            <button type="button" class="md-category__btn">메인요리</button>
+            <button type="button" class="md-category__btn">조림</button>
+        </div>
+
+        <div class="md-grid">
+
+            <!-- 1 -->
+            <article class="md-card">
+                <a href="#">
+                    <div class="md-card__image">
+                        <img src="./images/04_md_banchan/imgi_240_muchim_8.jpg" alt="매콤 콩나물 무침">
+                    </div>
+
+                    <div class="md-card__content">
+                        <div class="md-card__tag-area">
+                            <span class="md-card__tag md-card__tag--red">신제품</span>
+                        </div>
+
+                        <h3 class="md-card__title">매콤 콩나물 무침</h3>
+                        <p class="md-card__desc">매콤하고 아삭하게 즐기는 반찬</p>
+                        <strong class="md-card__price">3,200원</strong>
+                    </div>
+                </a>
+            </article>
+
+            <!-- 2 -->
+            <article class="md-card">
+                <a href="#">
+                    <div class="md-card__image">
+                        <img src="./images/04_md_banchan/imgi_242_muchim_9.jpg" alt="새콤달콤 도라지 무침">
+                    </div>
+
+                    <div class="md-card__content">
+                        <div class="md-card__tag-area">
+                            <span class="md-card__tag md-card__tag--red">신제품</span>
+                        </div>
+
+                        <h3 class="md-card__title">새콤달콤 도라지 무침</h3>
+                        <p class="md-card__desc">입맛을 돋우는 새콤달콤한 반찬</p>
+                        <strong class="md-card__price">5,800원</strong>
+                    </div>
+                </a>
+            </article>
+
+            <!-- 3 -->
+            <article class="md-card">
+                <a href="#">
+                    <div class="md-card__image">
+                        <img src="./images/04_md_banchan/imgi_245_fry_1.jpg" alt="미역줄기볶음">
+                    </div>
+
+                    <div class="md-card__content">
+                        <div class="md-card__tag-area">
+                            <span class="md-card__tag md-card__tag--green">인기</span>
+                        </div>
+
+                        <h3 class="md-card__title">미역줄기볶음</h3>
+                        <p class="md-card__desc">꼬들꼬들하고 담백한 밑반찬</p>
+                        <strong class="md-card__price">2,800원</strong>
+                    </div>
+                </a>
+            </article>
+
+            <!-- 4 -->
+            <article class="md-card">
+                <a href="#">
+                    <div class="md-card__image">
+                        <img src="./images/04_md_banchan/imgi_250_208_ZIP_P_4020_A.jpg" alt="알감자조림">
+                    </div>
+
+                    <div class="md-card__content">
+                        <div class="md-card__tag-area"></div>
+
+                        <h3 class="md-card__title">알감자조림</h3>
+                        <p class="md-card__desc">달콤 짭조름하게 졸여낸 알감자</p>
+                        <strong class="md-card__price">5,800원</strong>
+                    </div>
+                </a>
+            </article>
+
+            <!-- 5 -->
+            <article class="md-card">
+                <a href="#">
+                    <div class="md-card__image">
+                        <img src="./images/04_md_banchan/imgi_256_1833_ZIP_P_9396_A.jpg" alt="아이들 한우 비빔밥">
+                    </div>
+
+                    <div class="md-card__content">
+                        <div class="md-card__tag-area">
+                            <span class="md-card__tag md-card__tag--red">신제품</span>
+                        </div>
+
+                        <h3 class="md-card__title">아이들 한우 비빔밥</h3>
+                        <p class="md-card__desc">아이들도 맛있게 먹는 건강한 한 끼</p>
+
+                        <div class="md-card__price-row">
+                            <span class="md-card__discount">13%</span>
+                            <strong class="md-card__price">12,800원</strong>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- 6 -->
+            <article class="md-card">
+                <a href="#">
+                    <div class="md-card__image">
+                        <img src="./images/04_md_banchan/imgi_257_1830_ZIP_P_9393_A.jpg" alt="나물 비빔밥">
+                    </div>
+
+                    <div class="md-card__content">
+                        <div class="md-card__tag-area">
+                            <span class="md-card__tag md-card__tag--red">신제품</span>
+                        </div>
+
+                        <h3 class="md-card__title">나물 비빔밥</h3>
+                        <p class="md-card__desc">갖가지 나물을 풍성하게 담은 비빔밥</p>
+                        <strong class="md-card__price">10,800원</strong>
+                    </div>
+                </a>
+            </article>
+
+            <!-- 7 -->
+            <article class="md-card">
+                <a href="#">
+                    <div class="md-card__image">
+                        <img src="./images/04_md_banchan/imgi_258_2068_ZIP_P_9473_A.jpg" alt="한우 비빔밥">
+                    </div>
+
+                    <div class="md-card__content">
+                        <div class="md-card__tag-area"></div>
+
+                        <h3 class="md-card__title">한우 비빔밥</h3>
+                        <p class="md-card__desc">고소한 한우와 나물을 함께</p>
+                        <strong class="md-card__price">12,800원</strong>
+                    </div>
+                </a>
+            </article>
+
+            <!-- 8 -->
+            <article class="md-card">
+                <a href="#">
+                    <div class="md-card__image">
+                        <img src="./images/04_md_banchan/imgi_259_2100_ZIP_P_9474_A.jpg" alt="양념 꼬막 비빔밥">
+                    </div>
+
+                    <div class="md-card__content">
+                        <div class="md-card__tag-area"></div>
+
+                        <h3 class="md-card__title">양념 꼬막 비빔밥</h3>
+                        <p class="md-card__desc">꼬막이 왔꼬막</p>
+                        <strong class="md-card__price">13,800원</strong>
+                    </div>
+                </a>
+            </article>
+
+        </div>
+        <button
+            type="button"
+            class="mobile-more-btn"
+            data-target=".md-grid"
+            aria-expanded="false"
+        >
+            더보기
+        </button>
+    </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer__inner">
+
+        <!-- 고객센터 -->
+        <div class="footer__customer">
+            <strong class="footer__label">고객센터</strong>
+
+            <p class="footer__tel">1588-3754</p>
+
+            <a href="mailto:jipbanchan@seonmyeongchan.co.kr">
+                jipbanchan@seonmyeongchan.co.kr
+            </a>
+
+            <p class="footer__time">
+                평일 09:30~17:30 / 점심 09:30~12:00<br>
+                토요일 12:00~13:00<br>
+                일요일, 공휴일은 휴무입니다.
+            </p>
+        </div>
+
+
+        <!-- 회사정보 -->
+        <div class="footer__company">
+            <p class="footer__name">집반찬연구소</p>
+
+            <p>
+                신선식품 제조기업 대표이사 김OO | 법인번호 : 000-00-00000<br>
+                사업자등록번호 : 123-45-67894 &nbsp; 통신판매업 신고번호 : 제 2023-서울-3834 호
+            </p>
+
+            <p>
+                개인정보보호책임자 : 김OO &nbsp; 사업장 주소 : 서울특별시 OO구 OO로 123
+            </p>
+
+            <p class="footer__copyright">
+                Copyright © JIBBANCHAN CO., LTD. All Rights Reserved.
+            </p>
+        </div>
+
+    </div>
+</footer>
+
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
