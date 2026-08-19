@@ -1367,10 +1367,6 @@ img {
    MOBILE
    767px 이하
 ========================================================= */
-/* 모바일 더보기 버튼 - PC에서는 숨김 */
-.mobile-more-btn {
-    display: none;
-}
 
 @media screen and (max-width: 767px) {
 
@@ -1402,7 +1398,6 @@ img {
         height: 76px;
     }
 
-
     .header__inner {
         display: flex;
         align-items: center;
@@ -1413,29 +1408,6 @@ img {
 
         padding: 0 16px;
     }
-
-   
-    .mobile-menu-btn {
-    position: absolute;
-    top: 18px;
-    right: 16px;
-    z-index: 20;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-
-    width: 32px;
-    height: 32px;
-
-    padding: 5px;
-    border: 0;
-    background: transparent;
-
-    cursor: pointer;
-}
 
     /* 중앙 로고 */
     .header__logo {
@@ -2207,14 +2179,6 @@ img {
 }
 
 
-/* =========================================================
-   MOBILE 추가 수정
-========================================================= */
-/* 모바일 메뉴 버튼 - PC에서는 숨김 */
-.mobile-menu-btn {
-    display: none;
-}
-
 @media screen and (max-width: 767px) {
 
     /* =========================
@@ -2236,13 +2200,44 @@ img {
         padding: 0 16px;
     }
 
+    .mobile-menu-btn {
+    position: absolute;
+    top: 18px;
+    right: 16px;
+    z-index: 20;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    width: 32px;
+    height: 32px;
+
+    padding: 5px;
+    border: 0;
+    background: transparent;
+
+    cursor: pointer;
+}
+
+.mobile-menu-btn span {
+    display: block;
+
+    width: 22px;
+    height: 2px;
+
+    background: #222;
+    border-radius: 2px;
+}
+
+
     /* 로고 상단 중앙 */
     .header__logo {
         position: absolute;
-
         top: 14px;
         left: 50%;
-
         transform: translateX(-50%);
     }
 
@@ -2258,25 +2253,21 @@ img {
     /* 검색창을 로고 아래 한 줄 전체 사용 */
     .header__search {
         position: absolute;
-
         top: auto;
         right: 4px;
         bottom: 12px;
         left: 16px;
-
         transform: none;
     }
 
     .search-form {
         width: 100%;
         height: 38px;
-
         border-radius: 4px;
     }
 
     .search-form__input {
         padding: 0 12px;
-
         font-size: 12px;
     }
 
