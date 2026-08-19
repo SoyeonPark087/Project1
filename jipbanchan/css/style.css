@@ -1367,6 +1367,10 @@ img {
    MOBILE
    767px 이하
 ========================================================= */
+/* 모바일 더보기 버튼 - PC에서는 숨김 */
+.mobile-more-btn {
+    display: none;
+}
 
 @media screen and (max-width: 767px) {
 
@@ -1398,6 +1402,7 @@ img {
         height: 76px;
     }
 
+
     .header__inner {
         display: flex;
         align-items: center;
@@ -1408,6 +1413,29 @@ img {
 
         padding: 0 16px;
     }
+
+   
+    .mobile-menu-btn {
+    position: absolute;
+    top: 18px;
+    right: 16px;
+    z-index: 20;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    width: 32px;
+    height: 32px;
+
+    padding: 5px;
+    border: 0;
+    background: transparent;
+
+    cursor: pointer;
+}
 
     /* 중앙 로고 */
     .header__logo {
