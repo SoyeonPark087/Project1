@@ -1,0 +1,3358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOTTE EATZ</title>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<!-- =========================================================
+     TOP 버튼
+     - 처음에는 숨김
+     - 일정 스크롤 이후 노출
+     - 클릭 시 페이지 최상단으로 이동
+========================================================= -->
+<button
+    type="button"
+    class="top-button"
+    aria-label="페이지 맨 위로 이동"
+>
+    <!-- 위쪽 화살표 -->
+    <span class="top-button__arrow"></span>
+
+    <!-- 텍스트 -->
+    <span class="top-button__text">TOP</span>
+</button>
+
+<body>
+        <!-- 상단 유틸리티 메뉴 영역 -->
+    <div class="utility-bar">
+        <!-- 중앙 정렬용 1150px 이너 영역 -->
+        <div class="utility-inner">
+            <!-- 로그인 / 주문내역 / 매장찾기 메뉴 -->
+            <nav class="utility-menu" aria-label="사용자 메뉴">
+                <a href="#">로그인/회원가입</a>
+                <a href="#">주문/예약 내역</a>
+                <a href="#">매장찾기</a>
+            </nav>
+        </div>
+    </div>
+<!-- =========================================================
+     메인 헤더
+     - 로그인 상단바 바로 아래에 위치
+     - 기본 높이 90px
+========================================================= -->
+<header class="main-header">
+
+    <div class="main-header__inner">
+
+        <!-- =====================================================
+             로고
+             - 72 x 60px
+             - 이미지 파일명은 직접 변경
+        ====================================================== -->
+        <h1 class="main-header__logo">
+            <a href="#">
+                <img src="./images/imgi_126_comm_header_logo.svg" alt="LOTTE EATZ">
+            </a>
+        </h1>
+
+
+        <!-- =====================================================
+             메인 GNB
+             - 645 x 48px
+        ====================================================== -->
+        <nav class="main-gnb" aria-label="주요 메뉴">
+
+            <ul class="main-gnb__list">
+
+                <!-- 브랜드 -->
+                <li class="main-gnb__item">
+                    <a href="#" class="main-gnb__link">
+                        브랜드
+                    </a>
+                </li>
+
+                <!-- 쿠폰 -->
+                <li class="main-gnb__item">
+                    <a href="#" class="main-gnb__link">
+                        쿠폰
+                    </a>
+                </li>
+
+                <!-- 쇼핑 -->
+                <li class="main-gnb__item">
+                    <a href="#" class="main-gnb__link">
+                        쇼핑
+                    </a>
+                </li>
+
+                <!-- 이벤트 -->
+                <li class="main-gnb__item">
+                    <a href="#" class="main-gnb__link">
+                        이벤트
+                    </a>
+                </li>
+
+                <!-- 고객지원 -->
+                <li class="main-gnb__item">
+                    <a href="#" class="main-gnb__link">
+                        고객지원
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <!-- =====================================================
+             우측 유틸 영역
+        ====================================================== -->
+        <div class="main-header__util">
+
+            <!-- 장바구니 -->
+            <a href="#" class="main-header__cart" aria-label="장바구니">
+                <img src="./images/imgi_127_comm_ico_cart.svg" alt="">
+            </a>
+
+            <!-- 주문하기 -->
+            <a href="#" class="main-header__order">
+
+                <img
+                    src="./images/imgi_128_comm_ico_eatz_character.svg"
+                    alt=""
+                    class="main-header__order-icon"
+                >
+
+                <span>주문하기</span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         2단 메가메뉴
+         - 헤더 90px 바로 아래 위치
+         - 전체 가로 배경은 100%
+         - 메뉴 콘텐츠는 1150px 기준
+    ========================================================== -->
+    <div class="mega-menu">
+
+        <div class="mega-menu__inner">
+
+            <!-- =================================================
+                 주메뉴의 시작점과 정확히 동일한 위치에서 시작
+            ================================================== -->
+            <div class="mega-menu__list">
+
+                <!-- =================================================
+                     브랜드
+                     data-menu 값은 위 주메뉴 index와 동일
+                ================================================== -->
+                <ul class="mega-menu__column" data-menu="0">
+                    <li><a href="#">롯데리아</a></li>
+                    <li><a href="#">엔제리너스</a></li>
+                    <li><a href="#">크리스피크림</a></li>
+                    <li><a href="#">플레:이팅</a></li>
+                    <li><a href="#">드루어스</a></li>
+                    <li><a href="#">무쿄쿠</a></li>
+                    <li><a href="#">쇼콜라팔레트</a></li>
+                    <li><a href="#">마루가메 우동</a></li>
+                    <li><a href="#">스탠브루</a></li>
+                </ul>
+
+
+                <!-- =================================================
+                     쿠폰
+                ================================================== -->
+                <ul class="mega-menu__column" data-menu="1">
+                    <li><a href="#">받을 수 있는 쿠폰</a></li>
+                    <li><a href="#">내 쿠폰</a></li>
+                    <li><a href="#">사용 내역</a></li>
+                </ul>
+
+
+                <!-- =================================================
+                     쇼핑
+                ================================================== -->
+                <ul class="mega-menu__column" data-menu="2">
+                    <li><a href="#">전체</a></li>
+                    <li><a href="#">상품</a></li>
+                    <li><a href="#">모바일상품권</a></li>
+                </ul>
+
+
+                <!-- =================================================
+                     이벤트
+                ================================================== -->
+                <ul class="mega-menu__column" data-menu="3">
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">체험클래스</a></li>
+                    <li><a href="#">룰렛</a></li>
+                    <li><a href="#">EATZ TV</a></li>
+                </ul>
+
+
+                <!-- =================================================
+                     고객지원
+                ================================================== -->
+                <ul class="mega-menu__column" data-menu="4">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">설문조사</a></li>
+                    <li><a href="#">고객의소리</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+<!-- =========================================================
+     메인 비주얼 전체
+     - LEFT  : 메인 배너 + 주문 방식 선택
+     - RIGHT : EATZ 마일
+========================================================= -->
+<section class="main-visual">
+
+    <div class="main-visual__inner">
+
+        <!-- =====================================================
+             LEFT 영역
+             - 폭 800px
+             - 배너와 주문바를 같은 컬럼에 배치
+        ====================================================== -->
+        <div class="main-visual__left">
+
+            <!-- =================================================
+                 메인 배너
+            ================================================== -->
+            <div class="main-banner">
+
+                <!-- Swiper -->
+                <div class="swiper main-banner-swiper">
+
+                    <div class="swiper-wrapper">
+
+                        <!-- =====================================
+                             배너 01
+                        ====================================== -->
+                        <div class="swiper-slide">
+
+                            <a
+                                href="#"
+                                class="main-banner__link main-banner__link--01"
+                            >
+
+                                <!-- 배너 텍스트 -->
+                                <div class="main-banner__text">
+
+                                    <h2 class="main-banner__title">
+                                        롯데리아 X 서울경찰청<br>
+                                        스쿨존 교통 안전 캠페인
+                                    </h2>
+
+                                    <p class="main-banner__desc">
+                                        어린이 안심 세상 프로젝트
+                                    </p>
+
+                                </div>
+
+                            </a>
+
+                        </div>
+
+
+                        <!-- =====================================
+                             배너 02
+                        ====================================== -->
+                        <div class="swiper-slide">
+
+                            <a
+                                href="#"
+                                class="main-banner__link main-banner__link--02"
+                            >
+
+                                <!-- 배너 텍스트 -->
+                                <div class="main-banner__text">
+
+                                    <h2 class="main-banner__title">
+                                        맛있는 즐거움이 가득한<br>
+                                        LOTTE EATZ
+                                    </h2>
+
+                                    <p class="main-banner__desc">
+                                        다양한 브랜드의 혜택을 만나보세요
+                                    </p>
+
+                                </div>
+
+                            </a>
+
+                        </div>
+
+
+                        <!-- =====================================
+                             배너 03
+                        ====================================== -->
+                        <div class="swiper-slide">
+
+                            <a
+                                href="#"
+                                class="main-banner__link main-banner__link--03"
+                            >
+
+                                <!-- 배너 텍스트 -->
+                                <div class="main-banner__text">
+
+                                    <h2 class="main-banner__title">
+                                        매일 만나는 새로운 혜택<br>
+                                        EATZ에서 즐겨보세요
+                                    </h2>
+
+                                    <p class="main-banner__desc">
+                                        쿠폰부터 이벤트까지 한 번에
+                                    </p>
+
+                                </div>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     배너 우측 하단 페이지 컨트롤
+                ================================================== -->
+                <div class="main-banner__controls">
+
+                    <!-- 이전 -->
+                    <button
+                        type="button"
+                        class="main-banner__prev"
+                        aria-label="이전 배너"
+                    >
+                        <span
+                            class="main-banner__arrow main-banner__arrow--prev"
+                        ></span>
+                    </button>
+
+
+                    <!-- 페이지 번호 -->
+                    <div class="main-banner__pagination">
+
+                        <strong class="main-banner__current">
+                            1
+                        </strong>
+
+                        <span class="main-banner__slash">
+                            /
+                        </span>
+
+                        <span class="main-banner__total">
+                            3
+                        </span>
+
+                    </div>
+
+
+                    <!-- 다음 -->
+                    <button
+                        type="button"
+                        class="main-banner__next"
+                        aria-label="다음 배너"
+                    >
+                        <span
+                            class="main-banner__arrow main-banner__arrow--next"
+                        ></span>
+                    </button>
+
+
+                    <!-- 정지 / 재생 -->
+                    <button
+                        type="button"
+                        class="main-banner__play"
+                        aria-label="배너 자동재생 일시정지"
+                    >
+
+                        <span class="main-banner__pause-icon">
+                            <i></i>
+                            <i></i>
+                        </span>
+
+                    </button>
+
+                </div>
+
+
+                <!-- =================================================
+                     전체보기 + 버튼
+                ================================================== -->
+                <a
+                    href="#"
+                    class="main-banner__more"
+                    aria-label="배너 전체 보기"
+                ></a>
+
+            </div>
+
+
+            <!-- =================================================
+                 주문 방식 선택
+                 - 배너 바로 아래 20px
+                 - 배너와 동일한 800px
+            ================================================== -->
+            <div class="order-option">
+
+                <!-- =============================================
+                     좌측 Eatz / 잇츠 전체
+                ============================================== -->
+                <button
+                    type="button"
+                    class="order-option__store"
+                    aria-label="브랜드 선택"
+                >
+
+                    <!-- Eatz 로고 -->
+                    <img
+                        src="./images/imgi_152_comm_logo_mint.svg"
+                        alt="Eatz"
+                        class="order-option__logo"
+                    >
+
+                    <!-- 선택 브랜드 -->
+                    <span class="order-option__store-text">
+                        잇츠 전체
+                    </span>
+
+                    <!-- 아래 화살표 -->
+                    <span class="order-option__arrow"></span>
+
+                </button>
+
+
+                <!-- =============================================
+                     주문 방식 버튼
+                ============================================== -->
+                <div class="order-option__buttons">
+
+                    <!-- 배달 -->
+                    <a
+                        href="#"
+                        class="order-option__button"
+                    >
+
+                        <img
+                            src="./images/imgi_153_comm_ico_order_link01.svg"
+                            alt=""
+                            class="order-option__icon"
+                        >
+
+                        <span>배달</span>
+
+                    </a>
+
+
+                    <!-- 매장식사 -->
+                    <a
+                        href="#"
+                        class="order-option__button"
+                    >
+
+                        <img
+                            src="./images/imgi_154_comm_ico_order_link02.svg"
+                            alt=""
+                            class="order-option__icon"
+                        >
+
+                        <span>매장식사</span>
+
+                    </a>
+
+
+                    <!-- 포장 -->
+                    <a
+                        href="#"
+                        class="order-option__button"
+                    >
+
+                        <img
+                            src="./images/imgi_155_comm_ico_order_link03.svg"
+                            alt=""
+                            class="order-option__icon"
+                        >
+
+                        <span>포장</span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             RIGHT 영역
+             EATZ 마일
+             - 290 x 354px
+        ====================================================== -->
+        <aside class="eatz-mile">
+
+            <!-- =================================================
+                 EATZ 마일 제목
+            ================================================== -->
+            <a
+                href="#"
+                class="eatz-mile__title"
+            >
+
+                <!-- 마일 아이콘 -->
+                <img
+                    src="./images/comm_ico_eatz_mile_yellow.svg"
+                    alt=""
+                    class="eatz-mile__title-icon"
+                >
+
+                <strong>EATZ 마일</strong>
+
+                <!-- 우측 화살표 -->
+                <span class="eatz-mile__title-arrow"></span>
+
+            </a>
+
+
+            <!-- =================================================
+                 내 쿠폰 / 스탬프
+            ================================================== -->
+            <div class="eatz-mile__quick">
+
+                <a
+                    href="#"
+                    class="eatz-mile__quick-item"
+                >
+                    내 쿠폰
+                </a>
+
+                <!-- 중앙 구분선 -->
+                <span class="eatz-mile__quick-line"></span>
+
+                <a
+                    href="#"
+                    class="eatz-mile__quick-item"
+                >
+                    스탬프
+                </a>
+
+            </div>
+
+
+            <!-- =================================================
+                 멤버십 영역
+            ================================================== -->
+            <div class="eatz-mile__membership">
+
+                <!-- 멤버십 상단 -->
+                <div class="eatz-mile__membership-head">
+
+                    <strong class="eatz-mile__membership-title">
+                        내 멤버십 등급
+                    </strong>
+
+                    <a
+                        href="#"
+                        class="eatz-mile__grade-link"
+                    >
+                        등급 혜택 안내
+
+                        <span></span>
+                    </a>
+
+                </div>
+
+
+                <!-- 로그인 문구 -->
+                <p class="eatz-mile__login-text">
+
+                    <a
+                        href="#"
+                        class="eatz-mile__login-link"
+                    >
+                        로그인
+                    </a>
+
+                    하고<br>
+
+                    멤버십 등급 혜택을 받아보세요!
+
+                </p>
+
+
+                <!-- =================================================
+                     브랜드 로고
+                     - 3개 브랜드가 합쳐진 이미지 1장
+                ================================================== -->
+                <a
+                    href="#"
+                    class="eatz-mile__brand-image"
+                >
+
+                    <img
+                        src="./images/imgi_159_comm_ico_brand_three.svg"
+                        alt="EATZ 브랜드"
+                    >
+
+                </a>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     쿠폰 슬라이드 섹션
+     - 총 쿠폰 8개
+     - 한 화면에 4개 노출
+     - 자동 슬라이드 없음
+     - 최초에는 NEXT 버튼만 노출
+========================================================= -->
+<section class="coupon-section">
+
+    <div class="coupon-section__inner">
+
+        <!-- =====================================================
+             섹션 제목
+        ====================================================== -->
+        <div class="coupon-section__head">
+
+            <a href="#" class="coupon-section__title">
+                지금 바로 쓸 수 있는 쿠폰
+
+                <!-- 제목 우측 화살표 -->
+                <span class="coupon-section__title-arrow"></span>
+            </a>
+
+        </div>
+
+
+        <!-- =====================================================
+             쿠폰 Slider 영역
+        ====================================================== -->
+        <div class="coupon-slider-wrap">
+
+            <!-- Swiper -->
+            <div class="swiper coupon-swiper">
+
+                <div class="swiper-wrapper">
+
+
+                    <!-- =================================================
+                         쿠폰 01
+                    ================================================== -->
+                    <div class="swiper-slide">
+
+                        <article class="coupon-card">
+
+                            <!-- 상품 이미지 -->
+                            <div class="coupon-card__image">
+                                <img
+                                    src="./images/cheese.png"
+                                    alt="[EATZ] 클래식치즈버거"
+                                >
+                            </div>
+
+
+                            <!-- 쿠폰 정보 -->
+                            <div class="coupon-card__content">
+
+                                <!-- 브랜드 -->
+                                <span class="coupon-card__brand">
+                                    롯데리아
+                                </span>
+
+                                <!-- 상품명 -->
+                                <strong class="coupon-card__name">
+                                    [EATZ]클래식치즈버거
+                                </strong>
+
+                                <!-- 가격 -->
+                                <div class="coupon-card__price">
+
+                                    <span class="coupon-card__discount">
+                                        12%
+                                    </span>
+
+                                    <strong class="coupon-card__sale-price">
+                                        5,000원
+                                    </strong>
+
+                                    <del class="coupon-card__origin-price">
+                                        5,700원
+                                    </del>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- =================================================
+                                 절취선 이미지
+                                 직접 이미지 교체
+                            ================================================== -->
+                            <div class="coupon-card__cutline">
+                                <img
+                                    src="./images/imgi_160_now_coupon_line.png"
+                                    alt="절취선"
+                                >
+                            </div>
+
+
+                            <!-- 쿠폰 받기 -->
+                            <button
+                                type="button"
+                                class="coupon-card__download"
+                            >
+                                <span>쿠폰 받기</span>
+
+                                <!-- 다운로드 아이콘 -->
+                                <img
+                                    src="./images/imgi_161_comm_coupon_download02.svg"
+                                    alt="다운로드"
+                                >
+                            </button>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         쿠폰 02
+                    ================================================== -->
+                    <div class="swiper-slide">
+
+                        <article class="coupon-card">
+
+                            <div class="coupon-card__image">
+                                <img
+                                    src="./images/doublechicken.png"
+                                    alt="[EATZ] 더블치킨버거"
+                                >
+                            </div>
+
+                            <div class="coupon-card__content">
+
+                                <span class="coupon-card__brand">
+                                    롯데리아
+                                </span>
+
+                                <strong class="coupon-card__name">
+                                    [EATZ]더블치킨버거
+                                </strong>
+
+                                <div class="coupon-card__price">
+
+                                    <span class="coupon-card__discount">
+                                        17%
+                                    </span>
+
+                                    <strong class="coupon-card__sale-price">
+                                        5,000원
+                                    </strong>
+
+                                    <del class="coupon-card__origin-price">
+                                        6,000원
+                                    </del>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- 절취선 이미지 -->
+                            <div class="coupon-card__cutline">
+                                <img
+                                    src="./images/imgi_160_now_coupon_line.png"
+                                    alt="절취선"
+                                >
+                            </div>
+
+
+                            <button
+                                type="button"
+                                class="coupon-card__download"
+                            >
+                                <span>쿠폰 받기</span>
+
+                                <img
+                                    src="./images/imgi_161_comm_coupon_download02.svg"
+                                    alt="다운로드"
+                                >
+                            </button>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         쿠폰 03
+                    ================================================== -->
+                    <div class="swiper-slide">
+
+                        <article class="coupon-card">
+
+                            <div class="coupon-card__image">
+                                <img
+                                    src="./images/hot combo.png"
+                                    alt="[EATZ] 핫크리스피 콤보"
+                                >
+                            </div>
+
+                            <div class="coupon-card__content">
+
+                                <span class="coupon-card__brand">
+                                    롯데리아
+                                </span>
+
+                                <strong class="coupon-card__name">
+                                    [EATZ]핫크리스피 콤보
+                                </strong>
+
+                                <div class="coupon-card__price">
+
+                                    <span class="coupon-card__discount">
+                                        20%
+                                    </span>
+
+                                    <strong class="coupon-card__sale-price">
+                                        6,800원
+                                    </strong>
+
+                                    <del class="coupon-card__origin-price">
+                                        8,500원
+                                    </del>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- 절취선 이미지 -->
+                            <div class="coupon-card__cutline">
+                                <img
+                                    src="./images/imgi_160_now_coupon_line.png"
+                                    alt="절취선"
+                                >
+                            </div>
+
+
+                            <button
+                                type="button"
+                                class="coupon-card__download"
+                            >
+                                <span>쿠폰 받기</span>
+
+                                <img
+                                    src="./images/imgi_161_comm_coupon_download02.svg"
+                                    alt="다운로드"
+                                >
+                            </button>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         쿠폰 04
+                    ================================================== -->
+                    <div class="swiper-slide">
+
+                        <article class="coupon-card">
+
+                            <div class="coupon-card__image">
+                                <img
+                                    src="./images/shrimp combo.png"
+                                    alt="[EATZ] 리아 새우 베이컨 콤보"
+                                >
+                            </div>
+
+                            <div class="coupon-card__content">
+
+                                <span class="coupon-card__brand">
+                                    롯데리아
+                                </span>
+
+                                <strong class="coupon-card__name">
+                                    [EATZ]리아 새우 베이컨 콤보
+                                </strong>
+
+                                <div class="coupon-card__price">
+
+                                    <span class="coupon-card__discount">
+                                        22%
+                                    </span>
+
+                                    <strong class="coupon-card__sale-price">
+                                        6,500원
+                                    </strong>
+
+                                    <del class="coupon-card__origin-price">
+                                        8,300원
+                                    </del>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- 절취선 이미지 -->
+                            <div class="coupon-card__cutline">
+                                <img
+                                    src="./images/imgi_160_now_coupon_line.png"
+                                    alt="절취선"
+                                >
+                            </div>
+
+
+                            <button
+                                type="button"
+                                class="coupon-card__download"
+                            >
+                                <span>쿠폰 받기</span>
+
+                                <img
+                                    src="./images/imgi_161_comm_coupon_download02.svg"
+                                    alt="다운로드"
+                                >
+                            </button>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         쿠폰 05
+                    ================================================== -->
+                    <div class="swiper-slide">
+
+                        <article class="coupon-card">
+
+                            <div class="coupon-card__image">
+                                <img
+                                    src="./images/for1.png"
+                                    alt="쿠폰 상품"
+                                >
+                            </div>
+
+                            <div class="coupon-card__content">
+
+                                <span class="coupon-card__brand">
+                                    롯데리아
+                                </span>
+
+                                <strong class="coupon-card__name">
+                                    [EATZ]한우불고기버거
+                                </strong>
+
+                                <div class="coupon-card__price">
+
+                                    <span class="coupon-card__discount">
+                                        15%
+                                    </span>
+
+                                    <strong class="coupon-card__sale-price">
+                                        7,200원
+                                    </strong>
+
+                                    <del class="coupon-card__origin-price">
+                                        8,500원
+                                    </del>
+
+                                </div>
+
+                            </div>
+
+                            <div class="coupon-card__cutline">
+                                <img
+                                    src="./images/imgi_160_now_coupon_line.png"
+                                    alt="절취선"
+                                >
+                            </div>
+
+                            <button
+                                type="button"
+                                class="coupon-card__download"
+                            >
+                                <span>쿠폰 받기</span>
+
+                                <img
+                                    src="./images/imgi_161_comm_coupon_download02.svg"
+                                    alt="다운로드"
+                                >
+                            </button>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         쿠폰 06
+                    ================================================== -->
+                    <div class="swiper-slide">
+
+                        <article class="coupon-card">
+
+                            <div class="coupon-card__image">
+                                <img
+                                    src="./images/for2.png"
+                                    alt="쿠폰 상품"
+                                >
+                            </div>
+
+                            <div class="coupon-card__content">
+
+                                <span class="coupon-card__brand">
+                                    롯데리아
+                                </span>
+
+                                <strong class="coupon-card__name">
+                                    [EATZ]모짜렐라인더버거
+                                </strong>
+
+                                <div class="coupon-card__price">
+
+                                    <span class="coupon-card__discount">
+                                        18%
+                                    </span>
+
+                                    <strong class="coupon-card__sale-price">
+                                        6,900원
+                                    </strong>
+
+                                    <del class="coupon-card__origin-price">
+                                        8,400원
+                                    </del>
+
+                                </div>
+
+                            </div>
+
+                            <div class="coupon-card__cutline">
+                                <img
+                                    src="./images/imgi_160_now_coupon_line.png"
+                                    alt="절취선"
+                                >
+                            </div>
+
+                            <button
+                                type="button"
+                                class="coupon-card__download"
+                            >
+                                <span>쿠폰 받기</span>
+
+                                <img
+                                    src="./images/imgi_161_comm_coupon_download02.svg"
+                                    alt="다운로드"
+                                >
+                            </button>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         쿠폰 07
+                    ================================================== -->
+                    <div class="swiper-slide">
+
+                        <article class="coupon-card">
+
+                            <div class="coupon-card__image">
+                                <img
+                                    src="./images/stick.png"
+                                    alt="쿠폰 상품"
+                                >
+                            </div>
+
+                            <div class="coupon-card__content">
+
+                                <span class="coupon-card__brand">
+                                    롯데리아
+                                </span>
+
+                                <strong class="coupon-card__name">
+                                    [EATZ]불고기버거 세트
+                                </strong>
+
+                                <div class="coupon-card__price">
+
+                                    <span class="coupon-card__discount">
+                                        20%
+                                    </span>
+
+                                    <strong class="coupon-card__sale-price">
+                                        6,400원
+                                    </strong>
+
+                                    <del class="coupon-card__origin-price">
+                                        8,000원
+                                    </del>
+
+                                </div>
+
+                            </div>
+
+                            <div class="coupon-card__cutline">
+                                <img
+                                    src="./images/imgi_160_now_coupon_line.png"
+                                    alt="절취선"
+                                >
+                            </div>
+
+                            <button
+                                type="button"
+                                class="coupon-card__download"
+                            >
+                                <span>쿠폰 받기</span>
+
+                                <img
+                                    src="./images/imgi_161_comm_coupon_download02.svg"
+                                    alt="다운로드"
+                                >
+                            </button>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         쿠폰 08
+                    ================================================== -->
+                    <div class="swiper-slide">
+
+                        <article class="coupon-card">
+
+                            <div class="coupon-card__image">
+                                <img
+                                    src="./images/wing.png"
+                                    alt="쿠폰 상품"
+                                >
+                            </div>
+
+                            <div class="coupon-card__content">
+
+                                <span class="coupon-card__brand">
+                                    롯데리아
+                                </span>
+
+                                <strong class="coupon-card__name">
+                                    [EATZ]데리버거 세트
+                                </strong>
+
+                                <div class="coupon-card__price">
+
+                                    <span class="coupon-card__discount">
+                                        16%
+                                    </span>
+
+                                    <strong class="coupon-card__sale-price">
+                                        5,500원
+                                    </strong>
+
+                                    <del class="coupon-card__origin-price">
+                                        6,500원
+                                    </del>
+
+                                </div>
+
+                            </div>
+
+                            <div class="coupon-card__cutline">
+                                <img
+                                    src="./images/imgi_160_now_coupon_line.png"
+                                    alt="절취선"
+                                >
+                            </div>
+
+                            <button
+                                type="button"
+                                class="coupon-card__download"
+                            >
+                                <span>쿠폰 받기</span>
+
+                                <img
+                                    src="./images/imgi_161_comm_coupon_download02.svg"
+                                    alt="다운로드"
+                                >
+                            </button>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================================
+                 LEFT 이동 버튼
+                 - 첫 화면에서는 자동으로 숨김
+                 - 한번 NEXT로 이동하면 표시
+            ====================================================== -->
+            <button
+                type="button"
+                class="coupon-slider__prev"
+                aria-label="이전 쿠폰 보기"
+            >
+                <span></span>
+            </button>
+
+
+            <!-- =====================================================
+                 RIGHT 이동 버튼
+                 - 첫 화면에서는 이 버튼만 표시
+            ====================================================== -->
+            <button
+                type="button"
+                class="coupon-slider__next"
+                aria-label="다음 쿠폰 보기"
+            >
+                <span></span>
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     이달의 핫메뉴
+     - 공통 INNER : 1150px
+     - 탭 클릭 시 브랜드별 메뉴 내용 변경
+========================================================= -->
+<section class="hot-menu">
+
+    <div class="hot-menu__inner">
+
+        <!-- =====================================================
+             섹션 타이틀
+        ====================================================== -->
+        <h2 class="hot-menu__title">
+            이달의 핫메뉴
+        </h2>
+
+
+        <!-- =====================================================
+             브랜드 탭
+             - aria-selected 값은 JavaScript에서 변경
+        ====================================================== -->
+        <div
+            class="hot-menu__tabs"
+            role="tablist"
+            aria-label="이달의 핫메뉴 브랜드"
+        >
+
+            <!-- 롯데리아 -->
+            <button
+                type="button"
+                class="hot-menu__tab is-active"
+                role="tab"
+                aria-selected="true"
+                aria-controls="hotMenuLotteria"
+                data-hot-tab="lotteria"
+            >
+                롯데리아
+            </button>
+
+            <!-- 구분선 -->
+            <span class="hot-menu__tab-line"></span>
+
+
+            <!-- 플레:이팅 -->
+            <button
+                type="button"
+                class="hot-menu__tab"
+                role="tab"
+                aria-selected="false"
+                aria-controls="hotMenuPlating"
+                data-hot-tab="plating"
+            >
+                플레:이팅
+            </button>
+
+            <!-- 구분선 -->
+            <span class="hot-menu__tab-line"></span>
+
+
+            <!-- 엔제리너스 -->
+            <button
+                type="button"
+                class="hot-menu__tab"
+                role="tab"
+                aria-selected="false"
+                aria-controls="hotMenuAngel"
+                data-hot-tab="angel"
+            >
+                엔제리너스
+            </button>
+
+            <!-- 구분선 -->
+            <span class="hot-menu__tab-line"></span>
+
+
+            <!-- 크리스피크림 도넛 -->
+            <button
+                type="button"
+                class="hot-menu__tab"
+                role="tab"
+                aria-selected="false"
+                aria-controls="hotMenuKrispy"
+                data-hot-tab="krispy"
+            >
+                크리스피크림 도넛
+            </button>
+
+        </div>
+
+
+        <!-- =====================================================
+             01. 롯데리아
+        ====================================================== -->
+        <div
+            class="hot-menu__panel is-active"
+            id="hotMenuLotteria"
+            role="tabpanel"
+            data-hot-panel="lotteria"
+        >
+
+            <!-- =============================================
+                 왼쪽 브랜드 비주얼 배너
+                 이미지는 직접 교체
+            ============================================== -->
+            <a
+                href="#"
+                class="hot-menu__visual"
+                style="background-image:url('./images/1_lotteria.png');"
+            >
+
+                <div class="hot-menu__visual-text">
+
+                    <strong>
+                        TASTE<br>
+                        THE FUN
+                    </strong>
+
+                    <span>
+                        메뉴 더보기
+                        <i></i>
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- =============================================
+                 메뉴 리스트
+            ============================================== -->
+            <div class="hot-menu__products">
+
+                <!-- 메뉴 01 -->
+                <article class="hot-product">
+
+                    <a href="#" class="hot-product__image">
+
+                        <!-- NEW 배지 -->
+                        <span class="hot-product__badge hot-product__badge--new">
+                            NEW
+                        </span>
+
+                        <img
+                            src="./images/lotte (1).png"
+                            alt="리아 토동새우"
+                        >
+
+                    </a>
+
+                    <div class="hot-product__info">
+
+                        <strong class="hot-product__name">
+                            리아 토동새우
+                        </strong>
+
+                        <strong class="hot-product__price">
+                            7,900원
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 메뉴 02 -->
+                <article class="hot-product">
+
+                    <a href="#" class="hot-product__image">
+
+                        <span class="hot-product__badge hot-product__badge--new">
+                            NEW
+                        </span>
+
+                        <img
+                            src="./images/lotte (2).png"
+                            alt="리아 토동새우 스파이시토마토"
+                        >
+
+                    </a>
+
+                    <div class="hot-product__info">
+
+                        <strong class="hot-product__name">
+                            리아 토동새우<br>
+                            스파이시토마토
+                        </strong>
+
+                        <strong class="hot-product__price">
+                            7,900원
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 메뉴 03 -->
+                <article class="hot-product">
+
+                    <a href="#" class="hot-product__image">
+
+                        <!-- BEST 배지 -->
+                        <span class="hot-product__badge hot-product__badge--best">
+                            BEST
+                        </span>
+
+                        <img
+                            src="./images/lotte (3).png"
+                            alt="리아 불고기"
+                        >
+
+                    </a>
+
+                    <div class="hot-product__info">
+
+                        <strong class="hot-product__name">
+                            리아 불고기
+                        </strong>
+
+                        <strong class="hot-product__price">
+                            5,100원
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 메뉴 04 -->
+                <article class="hot-product">
+
+                    <a href="#" class="hot-product__image">
+
+                        <span class="hot-product__badge hot-product__badge--best">
+                            BEST
+                        </span>
+
+                        <img
+                            src="./images/lotte (4).png"
+                            alt="양념감자"
+                        >
+
+                    </a>
+
+                    <div class="hot-product__info">
+
+                        <strong class="hot-product__name">
+                            양념감자
+                        </strong>
+
+                        <strong class="hot-product__price">
+                            2,700원
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 메뉴 05 -->
+                <article class="hot-product">
+
+                    <a href="#" class="hot-product__image">
+
+                        <span class="hot-product__badge hot-product__badge--best">
+                            BEST
+                        </span>
+
+                        <img
+                            src="./images/lotte (5).png"
+                            alt="화이어윙 2조각"
+                        >
+
+                    </a>
+
+                    <div class="hot-product__info">
+
+                        <strong class="hot-product__name">
+                            화이어윙 2조각
+                        </strong>
+
+                        <strong class="hot-product__price">
+                            3,400원
+                        </strong>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             02. 플레:이팅
+        ====================================================== -->
+        <div
+            class="hot-menu__panel"
+            id="hotMenuPlating"
+            role="tabpanel"
+            data-hot-panel="plating"
+            hidden
+        >
+
+            <!-- 왼쪽 브랜드 비주얼 -->
+            <a
+                href="#"
+                class="hot-menu__visual"
+                style="background-image:url('./images/3_pleeating.png');"
+            >
+
+                <div class="hot-menu__visual-text">
+
+                    <strong>
+                        Design the<br>
+                        Taste!
+                    </strong>
+
+                    <span>
+                        메뉴 더보기
+                        <i></i>
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- 메뉴 리스트 -->
+            <div class="hot-menu__products">
+
+                <!-- 메뉴 01 -->
+                <article class="hot-product">
+
+                    <a href="#" class="hot-product__image">
+                        <img
+                            src="./images/plates (1).jpg"
+                            alt="[31]돌솥비빔밥"
+                        >
+                    </a>
+
+                    <div class="hot-product__info">
+
+                        <strong class="hot-product__name">
+                            [31]돌솥비빔밥
+                        </strong>
+
+                        <strong class="hot-product__price">
+                            11,000원
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 메뉴 02 -->
+                <article class="hot-product">
+
+                    <a href="#" class="hot-product__image">
+                        <img
+                            src="./images/plates (2).jpg"
+                            alt="도가니탕"
+                        >
+                    </a>
+
+                    <div class="hot-product__info">
+
+                        <strong class="hot-product__name">
+                            도가니탕
+                        </strong>
+
+                        <strong class="hot-product__price">
+                            15,000원
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 메뉴 03 -->
+                <article class="hot-product">
+
+                    <a href="#" class="hot-product__image">
+                        <img
+                            src="./images/plates (3).jpg"
+                            alt="돈까스오므라이스"
+                        >
+                    </a>
+
+                    <div class="hot-product__info">
+
+                        <strong class="hot-product__name">
+                            돈까스오므라이스
+                        </strong>
+
+                        <strong class="hot-product__price">
+                            11,000원
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 메뉴 04 -->
+                <article class="hot-product">
+
+                    <a href="#" class="hot-product__image">
+                        <img
+                            src="./images/plates (4).jpg"
+                            alt="추억의 왕돈까스"
+                        >
+                    </a>
+
+                    <div class="hot-product__info">
+
+                        <strong class="hot-product__name">
+                            추억의 왕돈까스
+                        </strong>
+
+                        <strong class="hot-product__price">
+                            13,500원
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 메뉴 05 -->
+                <article class="hot-product">
+
+                    <a href="#" class="hot-product__image">
+                        <img
+                            src="./images/plates (5).jpg"
+                            alt="알밥세트"
+                        >
+                    </a>
+
+                    <div class="hot-product__info">
+
+                        <strong class="hot-product__name">
+                            알밥세트
+                        </strong>
+
+                        <strong class="hot-product__price">
+                            12,500원
+                        </strong>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             03. 엔제리너스
+        ====================================================== -->
+        <div
+            class="hot-menu__panel"
+            id="hotMenuAngel"
+            role="tabpanel"
+            data-hot-panel="angel"
+            hidden
+        >
+
+            <!-- 왼쪽 브랜드 비주얼 -->
+            <a
+                href="#"
+                class="hot-menu__visual"
+                style="background-image:url('./images/2_angelinus.png');"
+            >
+
+                <div class="hot-menu__visual-text">
+
+                    <strong>
+                        ALWAYS<br>
+                        AROUND US<br>
+                        ANGELINUS
+                    </strong>
+
+                    <span>
+                        메뉴 더보기
+                        <i></i>
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- 메뉴 리스트 -->
+            <div class="hot-menu__products">
+
+                <!-- 메뉴 01 -->
+                <article class="hot-product">
+
+                    <a href="#" class="hot-product__image">
+
+                        <span class="hot-product__badge hot-product__badge--angel">
+                            NEW
+                        </span>
+
+                        <img
+                            src="./images/angel (1).png"
+                            alt="티셔젤리에이드"
+                        >
+
+                    </a>
+
+                    <div class="hot-product__info">
+
+                        <strong class="hot-product__name">
+                            티셔젤리에이드
+                        </strong>
+
+                        <strong class="hot-product__price">
+                            6,600원
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 메뉴 02 -->
+                <article class="hot-product">
+
+                    <a href="#" class="hot-product__image">
+
+                        <span class="hot-product__badge hot-product__badge--angel">
+                            NEW
+                        </span>
+
+                        <img
+                            src="./images/angel (2).png"
+                            alt="티셔젤리 아이스티"
+                        >
+
+                    </a>
+
+                    <div class="hot-product__info">
+
+                        <strong class="hot-product__name">
+                            티셔젤리아이스티
+                        </strong>
+
+                        <strong class="hot-product__price">
+                            5,500원
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 메뉴 03 -->
+                <article class="hot-product">
+
+                    <a href="#" class="hot-product__image">
+
+                        <span class="hot-product__badge hot-product__badge--angel-best">
+                            BEST
+                        </span>
+
+                        <img
+                            src="./images/angel (3).png"
+                            alt="아메리카노"
+                        >
+
+                    </a>
+
+                    <div class="hot-product__info">
+
+                        <strong class="hot-product__name">
+                            아메리카노
+                        </strong>
+
+                        <strong class="hot-product__price">
+                            4,700원
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 메뉴 04 -->
+                <article class="hot-product">
+
+                    <a href="#" class="hot-product__image">
+
+                        <span class="hot-product__badge hot-product__badge--angel-best">
+                            BEST
+                        </span>
+
+                        <img
+                            src="./images/angel (4).png"
+                            alt="오리지널불고기"
+                        >
+
+                    </a>
+
+                    <div class="hot-product__info">
+
+                        <strong class="hot-product__name">
+                            오리지널불고기
+                        </strong>
+
+                        <strong class="hot-product__price">
+                            7,600원
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 메뉴 05 -->
+                <article class="hot-product">
+
+                    <a href="#" class="hot-product__image">
+
+                        <span class="hot-product__badge hot-product__badge--angel-best">
+                            BEST
+                        </span>
+
+                        <img
+                            src="./images/angel (5).png"
+                            alt="에그햄치즈오븐토스트"
+                        >
+
+                    </a>
+
+                    <div class="hot-product__info">
+
+                        <strong class="hot-product__name">
+                            에그햄치즈오븐토스트
+                        </strong>
+
+                        <strong class="hot-product__price">
+                            5,200원
+                        </strong>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             04. 크리스피크림 도넛
+        ====================================================== -->
+        <div
+            class="hot-menu__panel"
+            id="hotMenuKrispy"
+            role="tabpanel"
+            data-hot-panel="krispy"
+            hidden
+        >
+
+            <!-- 왼쪽 브랜드 비주얼 -->
+            <a
+                href="#"
+                class="hot-menu__visual"
+                style="background-image:url('./images/3_hot_krispy.png');"
+            >
+
+                <div class="hot-menu__visual-text">
+
+                    <strong>
+                        맛있는 즐거움이<br>
+                        찾아온다!
+                    </strong>
+
+                    <span>
+                        메뉴 더보기
+                        <i></i>
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- 메뉴 리스트 -->
+            <div class="hot-menu__products">
+
+                <!-- 메뉴 01 -->
+                <article class="hot-product">
+
+                    <a href="#" class="hot-product__image">
+
+                        <span class="hot-product__badge hot-product__badge--krispy">
+                            BEST
+                        </span>
+
+                        <img
+                            src="./images/3_hot_krispy.png"
+                            alt="오리지널 더즌"
+                        >
+
+                    </a>
+
+                    <div class="hot-product__info">
+
+                        <strong class="hot-product__name">
+                            오리지널 더즌
+                        </strong>
+
+                        <strong class="hot-product__price">
+                            18,000원
+                        </strong>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     EATZ 쇼핑
+     - 이너 사이즈 : 1150px
+     - MD 상품 : 10개
+     - 원두 상품 : 7개
+     - 자동재생 없음
+     - 좌우 버튼 + 마우스 드래그 지원
+========================================================= -->
+<section class="shopping-section">
+
+    <div class="shopping-section__inner">
+
+        <!-- =====================================================
+             섹션 타이틀
+        ====================================================== -->
+        <div class="shopping-section__head">
+
+            <a href="#" class="shopping-section__title">
+                EATZ 쇼핑
+
+                <!-- 제목 우측 화살표 -->
+                <span class="shopping-section__title-arrow"></span>
+            </a>
+
+        </div>
+
+
+        <!-- =====================================================
+             MD / 원두 탭
+        ====================================================== -->
+        <div
+            class="shopping-tabs"
+            role="tablist"
+            aria-label="EATZ 쇼핑 카테고리"
+        >
+
+            <!-- MD -->
+            <button
+                type="button"
+                class="shopping-tab is-active"
+                role="tab"
+                aria-selected="true"
+                aria-controls="shoppingMdPanel"
+                data-shopping-tab="md"
+            >
+                MD
+            </button>
+
+            <!-- 탭 구분선 -->
+            <span class="shopping-tab__line"></span>
+
+            <!-- 원두 -->
+            <button
+                type="button"
+                class="shopping-tab"
+                role="tab"
+                aria-selected="false"
+                aria-controls="shoppingBeanPanel"
+                data-shopping-tab="bean"
+            >
+                원두
+            </button>
+
+        </div>
+
+
+        <!-- =====================================================
+             MD PANEL
+             - 총 10개 상품
+        ====================================================== -->
+        <div
+            class="shopping-panel is-active"
+            id="shoppingMdPanel"
+            role="tabpanel"
+            data-shopping-panel="md"
+        >
+
+            <div class="shopping-slider-wrap">
+
+                <!-- MD Swiper -->
+                <div class="swiper shopping-swiper shopping-swiper--md">
+
+                    <div class="swiper-wrapper">
+
+                        <!-- =========================================
+                             MD 01
+                        ========================================== -->
+                        <div class="swiper-slide">
+
+                            <article class="shopping-product">
+
+                                <a href="#" class="shopping-product__link">
+
+                                    <!-- 상품 이미지 -->
+                                    <div class="shopping-product__image">
+
+                                        <img
+                                            src="./images/md1.png"
+                                            alt="크리스피크림 도넛 클래식 도트 시그니처 머그 상품 이미지"
+                                        >
+
+                                    </div>
+
+                                    <!-- 상품 정보 -->
+                                    <div class="shopping-product__info">
+
+                                        <span class="shopping-product__brand shopping-product__brand--green">
+                                            크리스피크림 도넛
+                                        </span>
+
+                                        <strong class="shopping-product__name">
+                                            클래식 도트 시그니처 머그(L)
+                                        </strong>
+
+                                        <strong class="shopping-product__price">
+                                            9,000원
+                                        </strong>
+
+                                    </div>
+
+                                </a>
+
+                            </article>
+
+                        </div>
+
+
+                        <!-- =========================================
+                             MD 02
+                        ========================================== -->
+                        <div class="swiper-slide">
+
+                            <article class="shopping-product">
+
+                                <a href="#" class="shopping-product__link">
+
+                                    <div class="shopping-product__image">
+
+                                        <img
+                                            src="./images/md2.jpg"
+                                            alt="크리스피크림 도넛 시그니처 머그 기프트 세트 상품 이미지"
+                                        >
+
+                                    </div>
+
+                                    <div class="shopping-product__info">
+
+                                        <span class="shopping-product__brand shopping-product__brand--green">
+                                            크리스피크림 도넛
+                                        </span>
+
+                                        <strong class="shopping-product__name">
+                                            시그니처 머그(S) 기프트 세트
+                                        </strong>
+
+                                        <!-- 할인 상품 -->
+                                        <div class="shopping-product__price-row">
+
+                                            <span class="shopping-product__discount">
+                                                5%
+                                            </span>
+
+                                            <strong class="shopping-product__price">
+                                                19,000원
+                                            </strong>
+
+                                        </div>
+
+                                        <del class="shopping-product__origin-price">
+                                            20,000원
+                                        </del>
+
+                                    </div>
+
+                                </a>
+
+                            </article>
+
+                        </div>
+
+
+                        <!-- =========================================
+                             MD 03
+                        ========================================== -->
+                        <div class="swiper-slide">
+
+                            <article class="shopping-product">
+
+                                <a href="#" class="shopping-product__link">
+
+                                    <div class="shopping-product__image">
+
+                                        <img
+                                            src="./images/md3.jpg"
+                                            alt="BDNS 캔버스백 그린 상품 이미지"
+                                        >
+
+                                    </div>
+
+                                    <div class="shopping-product__info">
+
+                                        <span class="shopping-product__brand shopping-product__brand--green">
+                                            크리스피크림 도넛
+                                        </span>
+
+                                        <strong class="shopping-product__name">
+                                            BDNS 캔버스백(그린)
+                                        </strong>
+
+                                        <strong class="shopping-product__price">
+                                            17,000원
+                                        </strong>
+
+                                    </div>
+
+                                </a>
+
+                            </article>
+
+                        </div>
+
+
+                        <!-- =========================================
+                             MD 04
+                        ========================================== -->
+                        <div class="swiper-slide">
+
+                            <article class="shopping-product">
+
+                                <a href="#" class="shopping-product__link">
+
+                                    <div class="shopping-product__image">
+
+                                        <img
+                                            src="./images/md4.png"
+                                            alt="엔제리너스 아소부 텀블러 머그 화이트 상품 이미지"
+                                        >
+
+                                    </div>
+
+                                    <div class="shopping-product__info">
+
+                                        <span class="shopping-product__brand shopping-product__brand--brown">
+                                            엔제리너스
+                                        </span>
+
+                                        <strong class="shopping-product__name">
+                                            아소부 텀블러머그(화이트)
+                                        </strong>
+
+                                        <strong class="shopping-product__price">
+                                            24,000원
+                                        </strong>
+
+                                    </div>
+
+                                </a>
+
+                            </article>
+
+                        </div>
+
+
+                        <!-- =========================================
+                             MD 05
+                        ========================================== -->
+                        <div class="swiper-slide">
+
+                            <article class="shopping-product">
+
+                                <a href="#" class="shopping-product__link">
+
+                                    <div class="shopping-product__image">
+
+                                        <img
+                                            src="./images/md5.png"
+                                            alt="크리스피크림 도넛 모던 골드링 시그니처 머그 상품 이미지"
+                                        >
+
+                                    </div>
+
+                                    <div class="shopping-product__info">
+
+                                        <span class="shopping-product__brand shopping-product__brand--green">
+                                            크리스피크림 도넛
+                                        </span>
+
+                                        <strong class="shopping-product__name">
+                                            모던 골드링 시그니처 머그(L)
+                                        </strong>
+
+                                        <strong class="shopping-product__price">
+                                            9,000원
+                                        </strong>
+
+                                    </div>
+
+                                </a>
+
+                            </article>
+
+                        </div>
+
+
+                        <!-- =========================================
+                             MD 06
+                        ========================================== -->
+                        <div class="swiper-slide">
+
+                            <article class="shopping-product">
+
+                                <a href="#" class="shopping-product__link">
+
+                                    <div class="shopping-product__image">
+
+                                        <img
+                                            src="./images/md6.jpg"
+                                            alt="크리스피크림 도넛 시그니처 텀블러 상품 이미지"
+                                        >
+
+                                    </div>
+
+                                    <div class="shopping-product__info">
+
+                                        <span class="shopping-product__brand shopping-product__brand--green">
+                                            크리스피크림 도넛
+                                        </span>
+
+                                        <strong class="shopping-product__name">
+                                            시그니처 텀블러
+                                        </strong>
+
+                                        <strong class="shopping-product__price">
+                                            18,000원
+                                        </strong>
+
+                                    </div>
+
+                                </a>
+
+                            </article>
+
+                        </div>
+
+
+                        <!-- =========================================
+                             MD 07
+                        ========================================== -->
+                        <div class="swiper-slide">
+
+                            <article class="shopping-product">
+
+                                <a href="#" class="shopping-product__link">
+
+                                    <div class="shopping-product__image">
+
+                                        <img
+                                            src="./images/md7.jpg"
+                                            alt="크리스피크림 도넛 에코백 상품 이미지"
+                                        >
+
+                                    </div>
+
+                                    <div class="shopping-product__info">
+
+                                        <span class="shopping-product__brand shopping-product__brand--green">
+                                            크리스피크림 도넛
+                                        </span>
+
+                                        <strong class="shopping-product__name">
+                                            데일리 에코백
+                                        </strong>
+
+                                        <strong class="shopping-product__price">
+                                            15,000원
+                                        </strong>
+
+                                    </div>
+
+                                </a>
+
+                            </article>
+
+                        </div>
+
+
+                        <!-- =========================================
+                             MD 08
+                        ========================================== -->
+                        <div class="swiper-slide">
+
+                            <article class="shopping-product">
+
+                                <a href="#" class="shopping-product__link">
+
+                                    <div class="shopping-product__image">
+
+                                        <img
+                                            src="./images/md8.jpg"
+                                            alt="엔제리너스 스테인리스 텀블러 상품 이미지"
+                                        >
+
+                                    </div>
+
+                                    <div class="shopping-product__info">
+
+                                        <span class="shopping-product__brand shopping-product__brand--brown">
+                                            엔제리너스
+                                        </span>
+
+                                        <strong class="shopping-product__name">
+                                            스테인리스 텀블러
+                                        </strong>
+
+                                        <strong class="shopping-product__price">
+                                            22,000원
+                                        </strong>
+
+                                    </div>
+
+                                </a>
+
+                            </article>
+
+                        </div>
+
+
+                        <!-- =========================================
+                             MD 09
+                        ========================================== -->
+                        <div class="swiper-slide">
+
+                            <article class="shopping-product">
+
+                                <a href="#" class="shopping-product__link">
+
+                                    <div class="shopping-product__image">
+
+                                        <img
+                                            src="./images/md9.png"
+                                            alt="크리스피크림 도넛 미니 머그 세트 상품 이미지"
+                                        >
+
+                                    </div>
+
+                                    <div class="shopping-product__info">
+
+                                        <span class="shopping-product__brand shopping-product__brand--green">
+                                            크리스피크림 도넛
+                                        </span>
+
+                                        <strong class="shopping-product__name">
+                                            미니 머그 2P 세트
+                                        </strong>
+
+                                        <strong class="shopping-product__price">
+                                            14,000원
+                                        </strong>
+
+                                    </div>
+
+                                </a>
+
+                            </article>
+
+                        </div>
+
+
+                        <!-- =========================================
+                             MD 10
+                        ========================================== -->
+                        <div class="swiper-slide">
+
+                            <article class="shopping-product">
+
+                                <a href="#" class="shopping-product__link">
+
+                                    <div class="shopping-product__image">
+
+                                        <img
+                                            src="./images/md10.png"
+                                            alt="크리스피크림 도넛 데일리 파우치 상품 이미지"
+                                        >
+
+                                    </div>
+
+                                    <div class="shopping-product__info">
+
+                                        <span class="shopping-product__brand shopping-product__brand--green">
+                                            크리스피크림 도넛
+                                        </span>
+
+                                        <strong class="shopping-product__name">
+                                            데일리 파우치
+                                        </strong>
+
+                                        <strong class="shopping-product__price">
+                                            12,000원
+                                        </strong>
+
+                                    </div>
+
+                                </a>
+
+                            </article>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =============================================
+                     MD 이전 버튼
+                     - 첫 화면에서는 disabled → 숨김
+                ============================================== -->
+                <button
+                    type="button"
+                    class="shopping-slider__prev shopping-slider__prev--md"
+                    aria-label="이전 MD 상품 보기"
+                >
+                    <span></span>
+                </button>
+
+
+                <!-- =============================================
+                     MD 다음 버튼
+                ============================================== -->
+                <button
+                    type="button"
+                    class="shopping-slider__next shopping-slider__next--md"
+                    aria-label="다음 MD 상품 보기"
+                >
+                    <span></span>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             원두 PANEL
+             - 총 7개 상품
+        ====================================================== -->
+        <div
+            class="shopping-panel"
+            id="shoppingBeanPanel"
+            role="tabpanel"
+            data-shopping-panel="bean"
+            hidden
+        >
+
+            <div class="shopping-slider-wrap">
+
+                <!-- 원두 Swiper -->
+                <div class="swiper shopping-swiper shopping-swiper--bean">
+
+                    <div class="swiper-wrapper">
+
+                        <!-- =========================================
+                             원두 01
+                        ========================================== -->
+                        <div class="swiper-slide">
+
+                            <article class="shopping-product">
+
+                                <a href="#" class="shopping-product__link">
+
+                                    <div class="shopping-product__image">
+
+                                        <img
+                                            src="./images/cf1.png"
+                                            alt="엔제리너스 시그니처 원두 상품 이미지"
+                                        >
+
+                                    </div>
+
+                                    <div class="shopping-product__info">
+
+                                        <span class="shopping-product__brand shopping-product__brand--brown">
+                                            엔제리너스
+                                        </span>
+
+                                        <strong class="shopping-product__name">
+                                            시그니처 원두 500g
+                                        </strong>
+
+                                        <strong class="shopping-product__price">
+                                            18,000원
+                                        </strong>
+
+                                    </div>
+
+                                </a>
+
+                            </article>
+
+                        </div>
+
+
+                        <!-- 원두 02 -->
+                        <div class="swiper-slide">
+
+                            <article class="shopping-product">
+
+                                <a href="#" class="shopping-product__link">
+
+                                    <div class="shopping-product__image">
+                                        <img
+                                            src="./images/cf2.png"
+                                            alt="엔제리너스 에스프레소 원두 상품 이미지"
+                                        >
+                                    </div>
+
+                                    <div class="shopping-product__info">
+
+                                        <span class="shopping-product__brand shopping-product__brand--brown">
+                                            엔제리너스
+                                        </span>
+
+                                        <strong class="shopping-product__name">
+                                            에스프레소 원두 500g
+                                        </strong>
+
+                                        <strong class="shopping-product__price">
+                                            18,000원
+                                        </strong>
+
+                                    </div>
+
+                                </a>
+
+                            </article>
+
+                        </div>
+
+
+                        <!-- 원두 03 -->
+                        <div class="swiper-slide">
+
+                            <article class="shopping-product">
+
+                                <a href="#" class="shopping-product__link">
+
+                                    <div class="shopping-product__image">
+                                        <img
+                                            src="./images/cf3.png"
+                                            alt="엔제리너스 콜롬비아 원두 상품 이미지"
+                                        >
+                                    </div>
+
+                                    <div class="shopping-product__info">
+
+                                        <span class="shopping-product__brand shopping-product__brand--brown">
+                                            엔제리너스
+                                        </span>
+
+                                        <strong class="shopping-product__name">
+                                            콜롬비아 원두
+                                        </strong>
+
+                                        <strong class="shopping-product__price">
+                                            17,000원
+                                        </strong>
+
+                                    </div>
+
+                                </a>
+
+                            </article>
+
+                        </div>
+
+
+                        <!-- 원두 04 -->
+                        <div class="swiper-slide">
+
+                            <article class="shopping-product">
+
+                                <a href="#" class="shopping-product__link">
+
+                                    <div class="shopping-product__image">
+                                        <img
+                                            src="./images/cf4.png"
+                                            alt="엔제리너스 케냐 원두 상품 이미지"
+                                        >
+                                    </div>
+
+                                    <div class="shopping-product__info">
+
+                                        <span class="shopping-product__brand shopping-product__brand--brown">
+                                            엔제리너스
+                                        </span>
+
+                                        <strong class="shopping-product__name">
+                                            케냐 원두
+                                        </strong>
+
+                                        <strong class="shopping-product__price">
+                                            19,000원
+                                        </strong>
+
+                                    </div>
+
+                                </a>
+
+                            </article>
+
+                        </div>
+
+
+                        <!-- 원두 05 -->
+                        <div class="swiper-slide">
+
+                            <article class="shopping-product">
+
+                                <a href="#" class="shopping-product__link">
+
+                                    <div class="shopping-product__image">
+                                        <img
+                                            src="./images/cf5.png"
+                                            alt="엔제리너스 브라질 원두 상품 이미지"
+                                        >
+                                    </div>
+
+                                    <div class="shopping-product__info">
+
+                                        <span class="shopping-product__brand shopping-product__brand--brown">
+                                            엔제리너스
+                                        </span>
+
+                                        <strong class="shopping-product__name">
+                                            브라질 원두
+                                        </strong>
+
+                                        <strong class="shopping-product__price">
+                                            17,000원
+                                        </strong>
+
+                                    </div>
+
+                                </a>
+
+                            </article>
+
+                        </div>
+
+
+                        <!-- 원두 06 -->
+                        <div class="swiper-slide">
+
+                            <article class="shopping-product">
+
+                                <a href="#" class="shopping-product__link">
+
+                                    <div class="shopping-product__image">
+                                        <img
+                                            src="./images/cf6.png"
+                                            alt="엔제리너스 디카페인 원두 상품 이미지"
+                                        >
+                                    </div>
+
+                                    <div class="shopping-product__info">
+
+                                        <span class="shopping-product__brand shopping-product__brand--brown">
+                                            엔제리너스
+                                        </span>
+
+                                        <strong class="shopping-product__name">
+                                            디카페인 원두
+                                        </strong>
+
+                                        <strong class="shopping-product__price">
+                                            20,000원
+                                        </strong>
+
+                                    </div>
+
+                                </a>
+
+                            </article>
+
+                        </div>
+
+
+                        <!-- 원두 07 -->
+                        <div class="swiper-slide">
+
+                            <article class="shopping-product">
+
+                                <a href="#" class="shopping-product__link">
+
+                                    <div class="shopping-product__image">
+                                        <img
+                                            src="./images/cf7.png"
+                                            alt="엔제리너스 드립백 세트 상품 이미지"
+                                        >
+                                    </div>
+
+                                    <div class="shopping-product__info">
+
+                                        <span class="shopping-product__brand shopping-product__brand--brown">
+                                            엔제리너스
+                                        </span>
+
+                                        <strong class="shopping-product__name">
+                                            시그니처 드립백 세트
+                                        </strong>
+
+                                        <strong class="shopping-product__price">
+                                            15,000원
+                                        </strong>
+
+                                    </div>
+
+                                </a>
+
+                            </article>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 원두 이전 -->
+                <button
+                    type="button"
+                    class="shopping-slider__prev shopping-slider__prev--bean"
+                    aria-label="이전 원두 상품 보기"
+                >
+                    <span></span>
+                </button>
+
+
+                <!-- 원두 다음 -->
+                <button
+                    type="button"
+                    class="shopping-slider__next shopping-slider__next--bean"
+                    aria-label="다음 원두 상품 보기"
+                >
+                    <span></span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     EATZ TV
+     - 쇼핑 섹션 바로 아래에 삽입
+     - 영상/광고 카드 총 4개
+     - 이미지는 직접 교체
+========================================================= -->
+<section class="eatz-tv">
+
+    <div class="eatz-tv__inner">
+
+        <!-- =====================================================
+             섹션 타이틀
+        ====================================================== -->
+        <div class="eatz-tv__head">
+
+            <a href="#" class="eatz-tv__title">
+
+                <span>EATZ TV</span>
+
+                <!-- 제목 오른쪽 화살표 -->
+                <i class="eatz-tv__title-arrow"></i>
+
+            </a>
+
+        </div>
+
+
+        <!-- =====================================================
+             광고 / 영상 카드 리스트
+        ====================================================== -->
+        <div class="eatz-tv__list">
+
+
+            <!-- =================================================
+                 영상 01
+            ================================================== -->
+            <article class="eatz-tv__item">
+
+                <a href="#" class="eatz-tv__link">
+
+                    <!-- 영상 썸네일 -->
+                    <div class="eatz-tv__thumb">
+
+                        <img
+                            src="./images/tv (2).jpg"
+                            alt="단기 직전까지 끌어올린 반전의 맛 햄버거 광고 영상"
+                        >
+
+                    </div>
+
+                    <!-- 영상 제목 -->
+                    <strong class="eatz-tv__text">
+                        타기 직전까지 끌어올린 반전의 맛! #번트비프<br>
+                        버거 (30s)
+                    </strong>
+
+                </a>
+
+            </article>
+
+
+            <!-- =================================================
+                 영상 02
+            ================================================== -->
+            <article class="eatz-tv__item">
+
+                <a href="#" class="eatz-tv__link">
+
+                    <!-- 영상 썸네일 -->
+                    <div class="eatz-tv__thumb">
+
+                        <img
+                            src="./images/tv (3).jpg"
+                            alt="버거를 맛있게 만드는 방법 광고 영상"
+                        >
+
+                    </div>
+
+                    <!-- 영상 제목 -->
+                    <strong class="eatz-tv__text">
+                        탄 줄 알았다고? 삐딱한 생각이 버거를 맛있게<br>
+                        #번트비프버거 (FULL)
+                    </strong>
+
+                </a>
+
+            </article>
+
+
+            <!-- =================================================
+                 영상 03
+            ================================================== -->
+            <article class="eatz-tv__item">
+
+                <a href="#" class="eatz-tv__link">
+
+                    <!-- 영상 썸네일 -->
+                    <div class="eatz-tv__thumb">
+
+                        <img
+                            src="./images/tv (4).jpg"
+                            alt="롯데리아 직원 광고 영상"
+                        >
+
+                    </div>
+
+                    <!-- 영상 제목 -->
+                    <strong class="eatz-tv__text">
+                        롯데리아 또 한번 삐딱해진다.
+                    </strong>
+
+                </a>
+
+            </article>
+
+
+            <!-- =================================================
+                 영상 04
+            ================================================== -->
+            <article class="eatz-tv__item">
+
+                <a href="#" class="eatz-tv__link">
+
+                    <!-- 영상 썸네일 -->
+                    <div class="eatz-tv__thumb">
+
+                        <img
+                            src="./images/tv (1).jpg"
+                            alt="그렇게 딸바보가 된다 광고 영상"
+                        >
+
+                    </div>
+
+                    <!-- 영상 제목 -->
+                    <strong class="eatz-tv__text">
+                        그렇게 딸바보가 된다
+                    </strong>
+
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     FOOTER
+     - 페이지 공통 INNER : 1150px
+     - Family Site 클릭 시 위쪽으로 목록 표시
+========================================================= -->
+<footer class="footer">
+
+    <div class="footer__inner">
+
+        <!-- =====================================================
+             Footer 상단
+             - 좌측 : 정책/서비스 메뉴
+             - 우측 : Family Site
+        ====================================================== -->
+        <div class="footer__top">
+
+            <!-- =================================================
+                 정책 메뉴
+            ================================================== -->
+            <nav class="footer__policy" aria-label="푸터 정책 메뉴">
+
+                <a href="#" class="footer__policy-link footer__policy-link--point">
+                    개인정보처리방침
+                </a>
+
+                <a href="#" class="footer__policy-link footer__policy-link--bold">
+                    이용약관
+                </a>
+
+                <a href="#" class="footer__policy-link footer__policy-link--point">
+                    위치기반서비스 이용약관
+                </a>
+
+                <a href="#" class="footer__policy-link">
+                    영상정보 처리기기 운영 및 관리 방침
+                </a>
+
+                <a href="#" class="footer__policy-link">
+                    공지사항
+                </a>
+
+                <a href="#" class="footer__policy-link">
+                    창업상담
+                </a>
+
+                <a href="#" class="footer__policy-link">
+                    설정
+                </a>
+
+            </nav>
+
+
+            <!-- =================================================
+                 FAMILY SITE
+                 - 버튼을 누르면 위쪽으로 펼쳐짐
+            ================================================== -->
+            <div class="family-site">
+
+                <!-- Family Site 목록 -->
+                <div
+                    class="family-site__menu"
+                    id="familySiteMenu"
+                    aria-hidden="true"
+                >
+
+                    <ul class="family-site__list">
+
+                        <li><a href="#" target="_blank" rel="noopener">롯데그룹</a></li>
+                        <li><a href="#" target="_blank" rel="noopener">롯데GRS</a></li>
+                        <li><a href="#" target="_blank" rel="noopener">L.POINT</a></li>
+                        <li><a href="#" target="_blank" rel="noopener">롯데채용센터</a></li>
+                        <li><a href="#" target="_blank" rel="noopener">롯데제과</a></li>
+                        <li><a href="#" target="_blank" rel="noopener">롯데칠성음료</a></li>
+                        <li><a href="#" target="_blank" rel="noopener">롯데주류BG</a></li>
+                        <li><a href="#" target="_blank" rel="noopener">롯데백화점</a></li>
+                        <li><a href="#" target="_blank" rel="noopener">에비뉴엘</a></li>
+                        <li><a href="#" target="_blank" rel="noopener">롯데마트</a></li>
+                        <li><a href="#" target="_blank" rel="noopener">토이저러스</a></li>
+                        <li><a href="#" target="_blank" rel="noopener">롯데슈퍼</a></li>
+                        <li><a href="#" target="_blank" rel="noopener">롯데시네마</a></li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- Family Site 버튼 -->
+                <button
+                    type="button"
+                    class="family-site__button"
+                    aria-expanded="false"
+                    aria-controls="familySiteMenu"
+                >
+                    <span>Family Site</span>
+
+                    <!-- 화살표 -->
+                    <span class="family-site__arrow"></span>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             가맹점 모집
+        ====================================================== -->
+        <div class="footer__row">
+
+            <strong class="footer__row-title">
+                가맹점 모집
+            </strong>
+
+            <div class="footer__row-content footer__buttons">
+
+                <a href="#" class="footer__small-button">
+                    롯데리아
+                </a>
+
+                <a href="#" class="footer__small-button">
+                    엔제리너스
+                </a>
+
+                <a href="#" class="footer__small-button">
+                    크리스피크림도넛
+                </a>
+
+                <a href="#" class="footer__small-button">
+                    스탠브루
+                </a>
+
+                <a href="#" class="footer__small-button">
+                    창업설명회 신청
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             협력사 거래희망등록
+        ====================================================== -->
+        <div class="footer__row">
+
+            <strong class="footer__row-title">
+                협력사 거래희망등록
+            </strong>
+
+            <div class="footer__row-content footer__buttons">
+
+                <a href="#" class="footer__small-button">
+                    납품제안
+                </a>
+
+                <a href="#" class="footer__small-button">
+                    임대제안
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             롯데GRS 사업자정보
+        ====================================================== -->
+        <div class="footer__row">
+
+            <strong class="footer__row-title">
+                롯데GRS 사업자정보
+            </strong>
+
+            <div class="footer__row-content footer__business">
+
+                <div class="footer__business-line">
+
+                    <span>
+                        대표자 : 이원택
+                    </span>
+
+                    <span>
+                        주소 : 서울시 송파구 백제고분로 217 LOTTE GRS 79 SQUARE
+                    </span>
+
+                    <span>
+                        사업자번호 : 106-81-23498
+                    </span>
+
+                </div>
+
+
+                <div class="footer__business-line">
+
+                    <span>
+                        통신판매번호 : 2024-서울송파-1356
+                    </span>
+
+                    <a href="#">
+                        사업자정보확인
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             문의처
+        ====================================================== -->
+        <div class="footer__row">
+
+            <strong class="footer__row-title">
+                문의처
+            </strong>
+
+            <div class="footer__row-content footer__contact">
+
+                <p>
+                    본사 고객의 소리 운영시간: 평일 9시~18시
+                    <span class="footer__divider"></span>
+                    유선상담
+                    <span class="footer__divider"></span>
+                    일반문의/매장이용 불편사항 080-550-0005 (평일 9시~18시)
+                </p>
+
+                <p>
+                    모바일 쿠폰 오류, 환불 등 문의 사항은 구입처에서만 유선 상담 가능합니다.
+                    <span class="footer__contact-gap"></span>
+                    LOTTE EATZ앱 문의: 1600-0552 (평일 9시~18시)
+                </p>
+
+                <p>
+                    일반 쿠폰(기프티엘): 1644-4276 (평일 9시30분~18시)
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             인증 정보
+             - 이미지 파일은 직접 교체
+        ====================================================== -->
+        <div class="footer__certifications">
+
+            <!-- ISMS-P -->
+            <div class="footer__certification">
+
+                <img
+                    src="./images/imgi_98_ico_ismsp_logo.png"
+                    alt="ISMS-P 정보보호 및 개인정보보호 관리체계 인증"
+                    class="footer__certification-image"
+                >
+
+                <div class="footer__certification-text">
+
+                    <p>
+                        인증 범위 : 롯데GRS 온라인 서비스
+                        (롯데잇츠 웹/앱, CRM 시스템, 홈페이지)
+                    </p>
+
+                    <p>
+                        유효기간 : 2026.01.21 ~ 2029.01.20
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- WA -->
+            <div class="footer__certification">
+
+                <img
+                    src="./images/imgi_99_ico_webwatch_logo.png"
+                    alt="웹 접근성 품질인증"
+                    class="footer__certification-image"
+                >
+
+                <div class="footer__certification-text">
+
+                    <p>
+                        인증 범위 : 롯데잇츠 웹 페이지
+                    </p>
+
+                    <p>
+                        유효기간 : 2026.05.07 ~ 2027.05.06
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             Footer 하단
+             - Copyright
+             - SNS
+        ====================================================== -->
+        <div class="footer__bottom">
+
+            <!-- Copyright -->
+            <p class="footer__copyright">
+                copyright © 2023 Lotte GRS co.,ltd all right reserved
+            </p>
+
+
+            <!-- SNS -->
+            <div class="footer__sns">
+
+                <!-- Facebook -->
+                <a
+                    href="#"
+                    class="footer__sns-link"
+                    aria-label="롯데GRS 페이스북"
+                >
+                    <img
+                        src="./images/imgi_163_comm_ico_sns_facebook.svg"
+                        alt="페이스북"
+                    >
+                </a>
+
+
+                <!-- Instagram -->
+                <a
+                    href="#"
+                    class="footer__sns-link"
+                    aria-label="롯데GRS 인스타그램"
+                >
+                    <img
+                        src="./images/imgi_166_comm_ico_sns_instagram.svg"
+                        alt="인스타그램"
+                    >
+                </a>
+
+
+                <!-- X -->
+                <a
+                    href="#"
+                    class="footer__sns-link"
+                    aria-label="롯데GRS X"
+                >
+                    <img
+                        src="./images/imgi_167_comm_ico_sns_twitter.svg"
+                        alt="X"
+                    >
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./js/script.js"></script>
+</body>
+</html>
