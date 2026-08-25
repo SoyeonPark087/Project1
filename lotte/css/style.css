@@ -1815,13 +1815,13 @@ a {
     position: absolute;
     z-index: 2;
 
-    left: 0;
-    right: 0;
+    left: 25px;
+    right: 25px;
 
     /* 기존보다 아래로 내려 버튼과 더 가깝게 */
     bottom: 40px;
 
-    width: 100%;
+    width: auto;
     height: 12px;
 
     pointer-events: none;
