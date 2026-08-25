@@ -765,13 +765,13 @@ a {
 /* 이전 / 다음 */
 .main-banner__prev,
 .main-banner__next {
-    flex: 0 0 22px;
+    flex: 0 0 15px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    width: 22px;
+    width: 15px;
     height: 36px;
 
     margin: 0;
@@ -819,7 +819,7 @@ a {
     align-items: center;
     justify-content: center;
 
-    width: 43px;
+    width: 35px;
     height: 36px;
 
     padding: 0;
@@ -853,7 +853,7 @@ a {
 
 /* 페이지 구분 */
 .main-banner__slash {
-    margin: 0 5px;
+    margin: 0 3px;
 
     color: rgba(255, 255, 255, 0.5);
 }
