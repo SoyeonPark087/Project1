@@ -723,21 +723,18 @@ a {
 .main-banner__controls {
     position: absolute;
     z-index: 20;
-
     right: 70px;
     bottom: 19px;
-
     display: flex;
     align-items: center;
-
+    justify-content: center;
+    
+    /* 중요: 컨트롤 박스 폭 고정 */
+    width: 116px;
     height: 36px;
-
-    padding: 0 9px;
-
+    padding: 0;
     border-radius: 18px;
-
     background-color: rgba(28, 36, 39, 0.86);
-
     white-space: nowrap;
 }
 
@@ -768,10 +765,23 @@ a {
 /* 이전 / 다음 */
 .main-banner__prev,
 .main-banner__next {
-    width: 20px;
-    height: 36px;
-}
+    flex: 0 0 22px;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 22px;
+    height: 36px;
+
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+
+    cursor: pointer;
+}
 
 /* =========================================================
    화살표 아이콘
@@ -803,17 +813,20 @@ a {
    페이지 숫자
 ========================================================= */
 .main-banner__pagination {
+   flex: 0 0 43px;
+
     display: flex;
     align-items: center;
+    justify-content: center;
 
+    width: 43px;
     height: 36px;
 
-    padding: 0 2px;
+    padding: 0;
 
-    color: rgba(255, 255, 255, 0.65);
+    color: rgba(255, 255, 255, 0.7);
 
     font-family: "Pretendard", sans-serif;
-
     font-size: 13px;
     font-weight: 600;
 
@@ -823,11 +836,17 @@ a {
 }
 
 
+
 /* 현재 페이지 */
 .main-banner__current {
+    display: inline-block;
+
+    min-width: 9px;
+
     color: #fff;
 
-    font-size: 13px;
+    text-align: center;
+
     font-weight: 700;
 }
 
@@ -842,7 +861,11 @@ a {
 
 /* 전체 페이지 */
 .main-banner__total {
-    color: rgba(255, 255, 255, 0.7);
+    display: inline-block;
+
+    min-width: 9px;
+
+    text-align: center;
 }
 
 
@@ -850,10 +873,24 @@ a {
    정지 / 재생
 ========================================================= */
 .main-banner__play {
-    width: 22px;
-    height: 36px;
-}
+    flex: 0 0 24px;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 24px;
+    height: 36px;
+
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    cursor: pointer;
+}
 
 /* 정지 아이콘 */
 .main-banner__pause-icon {
@@ -875,6 +912,26 @@ a {
     border-radius: 1px;
 
     background-color: #fff;
+}
+
+
+/* =========================================================
+   중요
+   첫 번째/마지막 슬라이드에서 버튼이 disabled 되어도
+   display:none으로 제거하지 않고 자리 유지
+
+   → 컨트롤 박스 폭이 변하지 않음
+========================================================= */
+.main-banner__prev.swiper-button-disabled,
+.main-banner__next.swiper-button-disabled {
+    visibility: hidden;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    /* display:none 사용 금지 */
+    display: flex;
 }
 
 
