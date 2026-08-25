@@ -1278,65 +1278,62 @@
             aria-label="이달의 핫메뉴 브랜드"
         >
 
-            <!-- 롯데리아 -->
-            <button
-                type="button"
-                class="hot-menu__tab is-active"
-                role="tab"
-                aria-selected="true"
-                aria-controls="hotMenuLotteria"
-                data-hot-tab="lotteria"
-            >
-                롯데리아
-            </button>
+    <!-- 엔제리너스 : 최초 활성 -->
+    <button
+        type="button"
+        class="hot-menu__tab is-active"
+        role="tab"
+        aria-selected="true"
+        aria-controls="hotMenuAngel"
+        data-hot-tab="angel"
+    >
+        엔제리너스
+    </button>
 
-            <!-- 구분선 -->
-            <span class="hot-menu__tab-line"></span>
-
-
-            <!-- 플레:이팅 -->
-            <button
-                type="button"
-                class="hot-menu__tab"
-                role="tab"
-                aria-selected="false"
-                aria-controls="hotMenuPlating"
-                data-hot-tab="plating"
-            >
-                플레:이팅
-            </button>
-
-            <!-- 구분선 -->
-            <span class="hot-menu__tab-line"></span>
+    <span class="hot-menu__tab-line"></span>
 
 
-            <!-- 엔제리너스 -->
-            <button
-                type="button"
-                class="hot-menu__tab"
-                role="tab"
-                aria-selected="false"
-                aria-controls="hotMenuAngel"
-                data-hot-tab="angel"
-            >
-                엔제리너스
-            </button>
+    <!-- 크리스피크림 도넛 -->
+    <button
+        type="button"
+        class="hot-menu__tab"
+        role="tab"
+        aria-selected="false"
+        aria-controls="hotMenuKrispy"
+        data-hot-tab="krispy"
+    >
+        크리스피크림 도넛
+    </button>
 
-            <!-- 구분선 -->
-            <span class="hot-menu__tab-line"></span>
+    <span class="hot-menu__tab-line"></span>
 
 
-            <!-- 크리스피크림 도넛 -->
-            <button
-                type="button"
-                class="hot-menu__tab"
-                role="tab"
-                aria-selected="false"
-                aria-controls="hotMenuKrispy"
-                data-hot-tab="krispy"
-            >
-                크리스피크림 도넛
-            </button>
+    <!-- 롯데리아 -->
+    <button
+        type="button"
+        class="hot-menu__tab"
+        role="tab"
+        aria-selected="false"
+        aria-controls="hotMenuLotteria"
+        data-hot-tab="lotteria"
+    >
+        롯데리아
+    </button>
+
+    <span class="hot-menu__tab-line"></span>
+
+
+    <!-- 플레:이팅 -->
+    <button
+        type="button"
+        class="hot-menu__tab"
+        role="tab"
+        aria-selected="false"
+        aria-controls="hotMenuPlating"
+        data-hot-tab="plating"
+    >
+        플레:이팅
+    </button>
 
         </div>
 
@@ -1345,10 +1342,11 @@
              01. 롯데리아
         ====================================================== -->
         <div
-            class="hot-menu__panel is-active"
-            id="hotMenuAngel"
+            class="hot-menu__panel"
+            id="hotMenuLotteria"
             role="tabpanel"
-            data-hot-panel="angel"
+            data-hot-panel="lotteria"
+            hidden
         >
 
             <!-- =============================================
@@ -1716,11 +1714,10 @@
              03. 엔제리너스
         ====================================================== -->
         <div
-            class="hot-menu__panel"
+            class="hot-menu__panel is-active"
             id="hotMenuAngel"
             role="tabpanel"
             data-hot-panel="angel"
-            hidden
         >
 
             <!-- 왼쪽 브랜드 비주얼 -->
