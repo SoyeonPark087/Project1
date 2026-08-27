@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>부산 공식 맛집 가이드</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">BUSAN PUBLIC DATA</p>
+        <h1 data-i18n="brand">부산 공식 맛집 가이드</h1>
+      </div>
+      <button id="languageButton" class="icon-button" aria-label="언어 변경">KO</button>
+    </header>
+
+    <main>
+      <section id="homeView" class="view active">
+        <section class="hero-card">
+          <p class="hero-copy" data-i18n="hero">부산에서 뭐 먹지?</p>
+          <div class="search-box">
+            <span>⌕</span>
+            <input id="homeSearchInput" type="search" data-i18n-placeholder="searchPlaceholder" placeholder="맛집, 메뉴, 지역 검색" />
+          </div>
+          <div class="hero-actions">
+            <button id="nearbyButton" class="primary-button" data-i18n="nearby">📍 내 주변 맛집</button>
+            <button id="openMapButton" class="secondary-button" data-i18n="openMap">🗺 지도에서 보기</button>
+          </div>
+        </section>
+
+        <section id="apiNotice" class="api-notice hidden"></section>
+
+        <section class="section">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">DISTRICT</p>
+              <h2 data-i18n="districtTitle">지역별 맛집</h2>
+            </div>
+            <button id="allDistrictButton" class="text-button" data-i18n="viewAll">전체보기</button>
+          </div>
+          <div id="districtChips" class="chip-row"></div>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">RECOMMENDED</p>
+              <h2 data-i18n="officialPicks">부산 공식 맛집</h2>
+            </div>
+            <span id="syncBadge" class="sync-badge">-</span>
+          </div>
+          <div id="homeRestaurantList" class="card-list"></div>
+        </section>
+      </section>
+
+      <section id="searchView" class="view">
+        <div class="sticky-search">
+          <div class="search-box">
+            <span>⌕</span>
+            <input id="searchInput" type="search" data-i18n-placeholder="searchPlaceholder" placeholder="맛집, 메뉴, 지역 검색" />
+          </div>
+          <div id="searchDistrictChips" class="chip-row compact"></div>
+          <div class="result-toolbar">
+            <strong id="searchResultCount">0</strong>
+            <select id="sortSelect" aria-label="정렬">
+              <option value="recommended">추천순</option>
+              <option value="distance">거리순</option>
+              <option value="name">이름순</option>
+            </select>
+          </div>
+        </div>
+        <div id="searchRestaurantList" class="card-list"></div>
+      </section>
+
+      <section id="mapView" class="view map-view">
+        <div class="map-toolbar">
+          <button id="locateButton" class="floating-button" data-i18n="myLocation">◎ 내 위치</button>
+          <button id="mapListToggle" class="floating-button" data-i18n="list">☰ 목록</button>
+        </div>
+        <div id="map"></div>
+        <div id="mapRestaurantList" class="map-card-strip"></div>
+      </section>
+
+      <section id="favoriteView" class="view">
+        <section class="section page-title-section">
+          <p class="section-kicker">SAVED</p>
+          <h2 data-i18n="favorites">찜한 맛집</h2>
+        </section>
+        <div id="favoriteRestaurantList" class="card-list"></div>
+        <div id="favoriteEmpty" class="empty-state hidden">
+          <div class="empty-emoji">♡</div>
+          <h3 data-i18n="noFavorites">아직 찜한 맛집이 없어요</h3>
+          <p data-i18n="noFavoritesDesc">마음에 드는 맛집의 하트를 눌러 저장해보세요.</p>
+        </div>
+      </section>
+
+      <section id="myView" class="view">
+        <section class="section page-title-section">
+          <p class="section-kicker">MY</p>
+          <h2 data-i18n="settings">설정</h2>
+        </section>
+
+        <div class="settings-card">
+          <button class="setting-row" id="languageSetting">
+            <div>
+              <strong data-i18n="language">언어</strong>
+              <span data-i18n="languageDesc">한국어 또는 영어로 변경합니다.</span>
+            </div>
+            <span id="currentLanguageLabel">한국어 ›</span>
+          </button>
+
+          <button class="setting-row" id="locationSetting">
+            <div>
+              <strong data-i18n="location">위치 권한</strong>
+              <span data-i18n="locationDesc">내 주변 맛집 탐색에 사용합니다.</span>
+            </div>
+            <span>›</span>
+          </button>
+
+          <button class="setting-row" id="reloadDataButton">
+            <div>
+              <strong data-i18n="reloadData">공공데이터 다시 불러오기</strong>
+              <span data-i18n="reloadDataDesc">국문/영문 OpenAPI를 다시 호출합니다.</span>
+            </div>
+            <span>↻</span>
+          </button>
+
+          <div class="setting-row static">
+            <div>
+              <strong data-i18n="dataSource">데이터 출처</strong>
+              <span data-i18n="dataSourceDesc">공공데이터포털 부산맛집정보 서비스</span>
+            </div>
+          </div>
+        </div>
+
+        <section class="section">
+          <p class="notice" data-i18n="practiceWarning">
+            연습과제용 프론트엔드 직접 호출 버전입니다. 실제 서비스에서는 공공데이터 ServiceKey를 서버에서 관리하세요.
+          </p>
+        </section>
+
+        <section class="section">
+          <p class="section-kicker">RECENT</p>
+          <h2 data-i18n="recentlyViewed">최근 본 맛집</h2>
+          <div id="recentRestaurantList" class="card-list"></div>
+        </section>
+      </section>
+    </main>
+
+    <nav class="bottom-nav">
+      <button class="nav-item active" data-view="homeView"><span>⌂</span><small data-i18n="home">홈</small></button>
+      <button class="nav-item" data-view="searchView"><span>⌕</span><small data-i18n="search">검색</small></button>
+      <button class="nav-item" data-view="mapView"><span>⌖</span><small data-i18n="map">지도</small></button>
+      <button class="nav-item" data-view="favoriteView"><span>♡</span><small data-i18n="favoritesShort">찜</small></button>
+      <button class="nav-item" data-view="myView"><span>☻</span><small>MY</small></button>
+    </nav>
+  </div>
+
+  <dialog id="detailDialog" class="detail-dialog">
+    <button id="detailCloseButton" class="dialog-close" aria-label="닫기">×</button>
+    <div id="detailContent"></div>
+  </dialog>
+
+  <dialog id="languageDialog" class="language-dialog">
+    <div class="dialog-sheet">
+      <div class="dialog-sheet-header">
+        <h3 data-i18n="selectLanguage">언어 선택</h3>
+        <button id="languageCloseButton" class="icon-button">×</button>
+      </div>
+      <div class="language-options">
+        <button class="language-option" data-language="ko">한국어</button>
+        <button class="language-option" data-language="en">English</button>
+      </div>
+    </div>
+  </dialog>
+
+  <div id="toast" class="toast" aria-live="polite"></div>
+
+  <script src="./config.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
