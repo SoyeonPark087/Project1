@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#070707" />
+  <title>VUEON — Streaming</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <header class="header" id="header">
+    <a class="brand" href="#top" aria-label="VUEON 홈">VUEON</a>
+
+    <nav class="desktop-nav" aria-label="주 메뉴">
+      <a class="active" href="#top">홈</a>
+      <a href="#series">시리즈</a>
+      <a href="#movies">영화</a>
+      <a href="#new">NEW</a>
+      <a href="#my-list">내가 찜한 콘텐츠</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="searchToggle" aria-label="검색 열기">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.2-4.2m1.2-5.3a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0Z"/></svg>
+      </button>
+      <button class="icon-btn desktop-only" aria-label="알림">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 7-3 8h18c0-1-3-1-3-8M9.8 20h4.4"/></svg>
+      </button>
+      <button class="login-link-btn" id="openLogin">로그인</button>
+
+      <div class="profile-menu-wrap hidden" id="profileMenuWrap">
+        <button class="profile-btn" id="profileBtn" aria-label="프로필 메뉴 열기" aria-expanded="false">
+          <span id="profileInitial">V</span>
+          <svg class="chevron desktop-only" viewBox="0 0 24 24"><path d="m7 10 5 5 5-5"/></svg>
+        </button>
+
+        <div class="profile-menu" id="profileMenu" aria-hidden="true">
+          <div class="profile-menu-user">
+            <div class="profile-menu-avatar" id="profileMenuInitial">V</div>
+            <div>
+              <strong id="profileMenuName">사용자</strong>
+              <span id="profileMenuEmail">user@example.com</span>
+            </div>
+          </div>
+
+          <button type="button" class="profile-menu-item" id="accountBtn">계정 정보</button>
+          <button type="button" class="profile-menu-item danger" id="logoutBtn">로그아웃</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-panel" id="searchPanel" aria-hidden="true">
+    <div class="search-box">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.2-4.2m1.2-5.3a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0Z"/></svg>
+      <input id="searchInput" type="search" placeholder="제목, 장르를 검색해보세요" autocomplete="off" />
+      <button id="searchClose" aria-label="검색 닫기">×</button>
+    </div>
+  </div>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-video" id="heroVideo"></div>
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span class="badge">V</span> VUEON ORIGINAL</p>
+        <h1>BLACK<br>HORIZON</h1>
+        <p class="hero-meta">
+          <span class="match">98% 일치</span>
+          <span>2026</span>
+          <span class="age">15+</span>
+          <span>시즌 1</span>
+        </p>
+        <p class="hero-copy">
+          기억을 거래할 수 있는 시대. 사라진 도시의 진실을 추적하던 한 요원이
+          자신의 과거까지 조작되었다는 사실을 발견한다.
+        </p>
+        <div class="hero-buttons">
+          <button class="btn btn-primary" id="playHero">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            재생
+          </button>
+          <button class="btn btn-secondary" id="infoHero">
+            <svg viewBox="0 0 24 24"><path d="M12 17v-6m0-4h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+            상세 정보
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-area">
+      <div id="searchResults" class="search-results hidden">
+        <div class="section-heading">
+          <h2>검색 결과</h2>
+          <span id="resultCount"></span>
+        </div>
+        <div class="poster-grid" id="resultGrid"></div>
+      </div>
+
+      <div id="contentRows"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="socials">
+      <a href="#" aria-label="Instagram">IG</a>
+      <a href="#" aria-label="YouTube">YT</a>
+      <a href="#" aria-label="X">X</a>
+    </div>
+    <div class="footer-links">
+      <a href="#">자막 및 음성</a>
+      <a href="#">고객 센터</a>
+      <a href="#">미디어 센터</a>
+      <a href="#">이용 약관</a>
+      <a href="#">개인정보 처리방침</a>
+      <a href="#">법적 고지</a>
+      <a href="#">문의하기</a>
+    </div>
+    <button class="service-code">서비스 코드</button>
+    <p>© 2026 VUEON Entertainment. Portfolio demo interface.</p>
+  </footer>
+
+  <nav class="mobile-nav" aria-label="모바일 주 메뉴">
+    <a class="active" href="#top">
+      <svg viewBox="0 0 24 24"><path d="M3 11 12 4l9 7v9H3z"/></svg>
+      <span>홈</span>
+    </a>
+    <a href="#new">
+      <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4zM8 8h8M8 12h8M8 16h5"/></svg>
+      <span>NEW</span>
+    </a>
+    <button id="mobileSearch">
+      <svg viewBox="0 0 24 24"><path d="m21 21-4.2-4.2m1.2-5.3a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0Z"/></svg>
+      <span>검색</span>
+    </button>
+    <a href="#my-list">
+      <svg viewBox="0 0 24 24"><path d="M5 4h14v17l-7-4-7 4z"/></svg>
+      <span>찜</span>
+    </a>
+  </nav>
+
+  <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true">
+    <article class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="닫기">×</button>
+      <div class="modal-visual" id="modalVisual"></div>
+      <div class="modal-body">
+        <div class="modal-title-row">
+          <div>
+            <p class="modal-kicker">VUEON FEATURE</p>
+            <h2 id="modalTitle"></h2>
+          </div>
+          <button class="circle-btn" id="modalLike" aria-label="찜하기">＋</button>
+        </div>
+        <div class="modal-meta" id="modalMeta"></div>
+        <p class="modal-desc" id="modalDesc"></p>
+        <button class="btn btn-primary" id="modalPlay">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          재생
+        </button>
+      </div>
+    </article>
+  </div>
+
+
+  <section class="auth-screen" id="authScreen" aria-hidden="true">
+    <div class="auth-bg"></div>
+    <div class="auth-shade"></div>
+
+    <header class="auth-header">
+      <button class="auth-brand" id="authHome" type="button">VUEON</button>
+      <button class="auth-close" id="authClose" type="button" aria-label="닫기">×</button>
+    </header>
+
+    <div class="auth-wrap">
+      <div class="auth-card">
+        <div class="auth-tabs" role="tablist" aria-label="회원 계정">
+          <button class="auth-tab active" id="loginTab" type="button" role="tab" aria-selected="true">로그인</button>
+          <button class="auth-tab" id="signupTab" type="button" role="tab" aria-selected="false">회원가입</button>
+        </div>
+
+        <form class="auth-form" id="loginForm" novalidate>
+          <div class="auth-copy">
+            <h2>다시 만나서 반가워요.</h2>
+            <p>VUEON 계정으로 로그인하고 감상을 이어보세요.</p>
+          </div>
+
+          <label class="field">
+            <span>이메일</span>
+            <input id="loginEmail" type="email" placeholder="name@example.com" autocomplete="email" required />
+            <small class="field-error"></small>
+          </label>
+
+          <label class="field">
+            <span>비밀번호</span>
+            <div class="password-wrap">
+              <input id="loginPassword" type="password" placeholder="비밀번호" autocomplete="current-password" required />
+              <button class="password-toggle" type="button" data-target="loginPassword">보기</button>
+            </div>
+            <small class="field-error"></small>
+          </label>
+
+          <div class="auth-options">
+            <label class="check-row">
+              <input id="rememberMe" type="checkbox" checked />
+              <span>로그인 정보 저장</span>
+            </label>
+            <button class="text-btn" id="forgotPassword" type="button">비밀번호를 잊으셨나요?</button>
+          </div>
+
+          <button class="auth-submit" type="submit">로그인</button>
+
+          <p class="switch-copy">VUEON이 처음이신가요?
+            <button class="text-btn strong" id="goSignup" type="button">지금 가입하기</button>
+          </p>
+          <p class="auth-note">이 화면은 프론트엔드 데모입니다. 실제 서비스에서는 서버 인증과 암호화 저장이 필요합니다.</p>
+        </form>
+
+        <form class="auth-form hidden" id="signupForm" novalidate>
+          <div class="auth-copy">
+            <h2>무제한 스트리밍을 시작하세요.</h2>
+            <p>간단한 정보만 입력하면 바로 VUEON을 이용할 수 있습니다.</p>
+          </div>
+
+          <label class="field">
+            <span>이름</span>
+            <input id="signupName" type="text" placeholder="홍길동" autocomplete="name" required />
+            <small class="field-error"></small>
+          </label>
+
+          <label class="field">
+            <span>이메일</span>
+            <input id="signupEmail" type="email" placeholder="name@example.com" autocomplete="email" required />
+            <small class="field-error"></small>
+          </label>
+
+          <label class="field">
+            <span>비밀번호</span>
+            <div class="password-wrap">
+              <input id="signupPassword" type="password" placeholder="8자 이상 입력" autocomplete="new-password" required />
+              <button class="password-toggle" type="button" data-target="signupPassword">보기</button>
+            </div>
+            <div class="password-strength" id="passwordStrength">
+              <i></i><i></i><i></i>
+            </div>
+            <small class="field-error"></small>
+          </label>
+
+          <label class="field">
+            <span>비밀번호 확인</span>
+            <div class="password-wrap">
+              <input id="signupPasswordConfirm" type="password" placeholder="비밀번호 다시 입력" autocomplete="new-password" required />
+              <button class="password-toggle" type="button" data-target="signupPasswordConfirm">보기</button>
+            </div>
+            <small class="field-error"></small>
+          </label>
+
+          <label class="check-row terms-row">
+            <input id="agreeTerms" type="checkbox" required />
+            <span>이용약관 및 개인정보 처리방침에 동의합니다.</span>
+          </label>
+          <small class="terms-error" id="termsError"></small>
+
+          <button class="auth-submit" type="submit">회원가입</button>
+
+          <p class="switch-copy">이미 계정이 있으신가요?
+            <button class="text-btn strong" id="goLogin" type="button">로그인</button>
+          </p>
+        </form>
+
+        <div class="auth-success hidden" id="authSuccess">
+          <div class="success-icon">✓</div>
+          <h2 id="successTitle">환영합니다.</h2>
+          <p id="successMessage">VUEON 로그인이 완료되었습니다.</p>
+          <button class="auth-submit" id="successContinue" type="button">VUEON 시작하기</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>
